@@ -77,7 +77,30 @@ export default buildConfig({
 
     },
     {
+      slug: 'submissions',
+      labels: { singular: 'Submission', plural: 'Submissions' },
+      admin: { useAsTitle: 'name', defaultColumns: ['name', 'email', 'topic', 'createdAt'] },
+      access: {
+        read: authenticated,
+        create: anyone,
+        update: authenticated,
+        delete: authenticated,
+      },
+      fields: [
+        { name: 'name', type: 'text', required: true },
+        { name: 'email', type: 'email', required: true },
+        {
+          name: 'topic',
+          type: 'select',
+          options: ['Strategic Programs', 'Corporate Financial Services'],
+          required: true,
+        },
+        { name: 'message', type: 'textarea', required: true },
+      ],
+    },
+    {
       slug: 'announcements',
+
       labels: { singular: 'Announcement', plural: 'Announcements' },
       admin: { useAsTitle: 'title', defaultColumns: ['title', 'featured'] },
       access: { read: anyone, create: authenticated, update: authenticated, delete: authenticated },

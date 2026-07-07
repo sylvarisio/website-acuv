@@ -1,4 +1,6 @@
 import { DotWave } from '@/components/animations'
+import ContactForm from '@/components/ContactForm'
+
 
 export const metadata = { title: 'Contact — Acuv Strategy' }
 
@@ -28,27 +30,9 @@ export default function Page() {
 
 <div data-screen-label="Form" style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 96px', display: 'grid', gridTemplateColumns: '1fr 380px', gap: '80px' }}>
   <div>
-    <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.2em', color: '#0E6B5A', marginBottom: '32px' }}>START THE CONVERSATION</div>
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '28px' }}>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        <label style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.18em', color: 'rgba(18,42,36,.5)' }}>NAME</label>
-        <input type="text" placeholder="Your name" style={{ fontFamily: 'var(--font-sans)', fontSize: '15px', color: '#122A24', background: 'transparent', border: 'none', borderBottom: '1px solid rgba(18,42,36,.25)', padding: '10px 0', outline: 'none' }} />
-      </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        <label style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.18em', color: 'rgba(18,42,36,.5)' }}>EMAIL</label>
-        <input type="email" placeholder="Your email" style={{ fontFamily: 'var(--font-sans)', fontSize: '15px', color: '#122A24', background: 'transparent', border: 'none', borderBottom: '1px solid rgba(18,42,36,.25)', padding: '10px 0', outline: 'none' }} />
-      </div>
-      <div style={{ gridColumn: '1 / -1', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        <label style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.18em', color: 'rgba(18,42,36,.5)' }}>TOPIC</label>
-        <input type="text" placeholder="— Choose One —" style={{ fontFamily: 'var(--font-sans)', fontSize: '15px', color: '#122A24', background: 'transparent', border: 'none', borderBottom: '1px solid rgba(18,42,36,.25)', padding: '10px 0', outline: 'none' }} />
-      </div>
-      <div style={{ gridColumn: '1 / -1', display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        <label style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.18em', color: 'rgba(18,42,36,.5)' }}>MESSAGE</label>
-        <textarea rows="5" placeholder="Where is the ambiguity today?" style={{ fontFamily: 'var(--font-sans)', fontSize: '15px', color: '#122A24', background: 'transparent', border: 'none', borderBottom: '1px solid rgba(18,42,36,.25)', padding: '10px 0', outline: 'none', resize: 'vertical' }}></textarea>
-      </div>
-    </div>
-    <div style={{ marginTop: '40px', fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.14em', color: '#F6F5F1', background: '#0A4A3F', padding: '16px 36px', borderRadius: '999px', display: 'inline-block', cursor: 'pointer' }}>SEND MESSAGE ↗</div>
+    <ContactForm />
   </div>
+
   <div style={{ position: 'relative', borderLeft: '1px solid rgba(18,42,36,.15)', paddingLeft: '56px', display: 'flex', flexDirection: 'column', gap: '40px' }}>
     <div style={{ position: 'absolute', left: '56px', right: '-40px', top: '-20px', bottom: '-20px', backgroundImage: 'radial-gradient(rgba(10,74,63,.09) 1px,transparent 1px)', backgroundSize: '14px 14px', WebkitMask: 'linear-gradient(to left,#000,transparent)', mask: 'linear-gradient(to left,#000,transparent)', animation: 'acv-drift 26s linear infinite', pointerEvents: 'none' }}></div>
     <div>
