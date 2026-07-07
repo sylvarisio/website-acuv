@@ -35,7 +35,7 @@ export default buildConfig({
       slug: 'media',
       access: { read: anyone, create: authenticated, update: authenticated, delete: authenticated },
       upload: {
-        staticDir: path.resolve(dirname, '../media'),
+        staticDir: process.env.MEDIA_DIR || path.resolve(dirname, '../media'),
       },
       fields: [{ name: 'alt', type: 'text' }],
     },
