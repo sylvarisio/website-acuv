@@ -68,8 +68,13 @@ export default buildConfig({
           type: 'select',
           options: ['report', 'company-profile', 'other'],
           defaultValue: 'other',
+          admin: {
+            description:
+              'Controls which site button downloads this file. "company-profile" → the homepage "Download Company Profile" button. "report" → the About page "Download the Report" button. If several docs share a category, the most recently updated one is used.',
+          },
         },
       ],
+
     },
     {
       slug: 'announcements',

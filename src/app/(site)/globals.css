@@ -1,18 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
 
-/* Licensed brand font — drop files into /public/fonts (see README there). */
+/* Licensed brand font — Neometric (.otf) lives in /public/fonts. */
 @font-face {
   font-family: 'Neometric';
-  src: url('/fonts/Neometric-Light.woff2') format('woff2');
+  src: url('/fonts/Neometric-Light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Neometric';
-  src: url('/fonts/Neometric-Medium.woff2') format('woff2');
+  src: url('/fonts/Neometric-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neometric';
+  src: url('/fonts/Neometric-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neometric';
+  src: url('/fonts/Neometric-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neometric';
+  src: url('/fonts/Neometric-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neometric';
+  src: url('/fonts/Neometric-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neometric';
+  src: url('/fonts/Neometric-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
   font-display: swap;
 }
 

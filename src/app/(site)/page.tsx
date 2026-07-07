@@ -7,18 +7,25 @@ export const dynamic = 'force-dynamic'
 
 export default async function Page() {
   let announcement: any = null
+  let companyProfileUrl: string | undefined
   try {
     const payload = await getPayload({ config })
     const res = await payload.find({ collection: 'announcements', where: { featured: { equals: true } }, limit: 1, sort: '-updatedAt' })
     announcement = res.docs[0] || null
+    const profileRes = await payload.find({ collection: 'documents', where: { category: { equals: 'company-profile' } }, limit: 1, sort: '-updatedAt' })
+    const profileDoc = profileRes.docs[0] as any
+    if (profileDoc && profileDoc.file && typeof profileDoc.file === 'object') {
+      companyProfileUrl = profileDoc.file.url
+    }
   } catch (e) {}
+
   return (
     <>
 <div data-screen-label="Hero" style={{ background: '#07332C', color: '#EAF4F0', position: 'relative', overflow: 'hidden' }}>
   <div style={{ position: 'absolute', right: '-220px', top: '-220px', width: '640px', height: '640px', border: '1px solid rgba(159,217,198,.15)', borderRadius: '50%' }}></div>
   <div style={{ position: 'absolute', right: '-140px', top: '-140px', width: '480px', height: '480px', border: '1px solid rgba(159,217,198,.12)', borderRadius: '50%' }}></div>
   <div style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '24px 56px', borderBottom: '1px solid rgba(159,217,198,.18)' }}>
-    <a href="/" style={{ display: 'inline-flex', alignItems: 'center' }}><img src="/logo.png" alt="acuv Strategy" style={{ width: '150px', height: 'auto' }} /></a>
+    <a href="/" style={{ display: 'inline-flex', alignItems: 'center' }}><img src="/logo.png" alt="acuv Strategy" style={{ width: '210px', height: 'auto' }} /></a>
     <div style={{ display: 'flex', gap: '22px', fontFamily: 'var(--font-sans)', fontSize: '10.5px', letterSpacing: '.08em' }}>
       <a href="/" style={{ color: '#EAF4F0' }}>01 HOME</a>
       <a href="/services" style={{ color: 'rgba(234,244,240,.6)' }}>02 SERVICES</a>
@@ -38,8 +45,14 @@ export default async function Page() {
   </div>
   <div style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '56px 56px 0' }}>
     <div style={{ position: 'relative', height: '400px', background: '#06302A', overflow: 'hidden' }}>
-      <DotWave gap={22} amp={16} alpha={1} />
-      <div style={{ position: 'absolute', left: '24px', bottom: '20px', fontFamily: 'var(--font-sans)', fontSize: '10px', color: 'rgba(159,217,198,.55)', letterSpacing: '.1em' }}>GENERATIVE BRAND WAVE — SWAP FOR FILM IF PREFERRED</div>
+      <video
+        src="/videos/acuv-reel.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+      />
     </div>
   </div>
   <div style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', padding: '0 56px 36px' }}>
@@ -58,7 +71,8 @@ export default async function Page() {
       <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.2em', color: '#0E6B5A', marginBottom: '20px' }}>WELCOME TO ACUV</div>
       <div style={{ fontSize: '42px', fontWeight: '300', lineHeight: '1.15', letterSpacing: '-.015em' }}>We believe in <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>confident growth</span></div>
       <p style={{ margin: '24px 0 0', fontSize: '14px', lineHeight: '1.75', color: 'rgba(18,42,36,.6)' }}>Whether you're a multi-generational family business navigating change or an emerging company chasing scale — strategy rooted in realism, execution backed by ownership, finance driven by credibility.</p>
-      <a href="/about" style={{ marginTop: '28px', fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.12em', color: '#F6F5F1', background: '#0A4A3F', padding: '13px 24px', borderRadius: '999px', display: 'inline-block' }}>DOWNLOAD COMPANY PROFILE</a>
+      <a href={companyProfileUrl || '/about'} target={companyProfileUrl ? '_blank' : undefined} rel={companyProfileUrl ? 'noopener noreferrer' : undefined} style={{ marginTop: '28px', fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.12em', color: '#F6F5F1', background: '#0A4A3F', padding: '13px 24px', borderRadius: '999px', display: 'inline-block' }}>DOWNLOAD COMPANY PROFILE</a>
+
     </div>
     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
       <div style={{ display: 'grid', gridTemplateColumns: '44px 200px 1fr', gap: '28px', alignItems: 'baseline', padding: '26px 0', borderTop: '1px solid rgba(18,42,36,.15)' }}>
@@ -185,7 +199,7 @@ export default async function Page() {
     </div>
     <div style={{ marginTop: '96px', borderTop: '1px solid rgba(159,217,198,.18)', paddingTop: '40px', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: '48px', fontSize: '13px', lineHeight: '1.8', color: 'rgba(234,244,240,.55)' }}>
       <div>
-        <div style={{ marginBottom: '12px' }}><img src="/logo.png" alt="acuv Strategy" style={{ width: '132px', height: 'auto' }} /></div>
+        <div style={{ marginBottom: '12px' }}><img src="/logo.png" alt="acuv Strategy" style={{ width: '170px', height: 'auto' }} /></div>
         From Beirut to New York to the MENA region — bespoke strategy programs backed by finance with integrity.
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}><div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.22em', color: '#9FD9C6', marginBottom: '12px' }}>QUICK LINKS</div><a href="/services" style={{ color: 'rgba(234,244,240,.55)' }}>Services</a><a href="/success-stories" style={{ color: 'rgba(234,244,240,.55)' }}>Success Stories</a><a href="/thoughts" style={{ color: 'rgba(234,244,240,.55)' }}>Insights &amp; Media</a></div>

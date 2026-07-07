@@ -1,14 +1,28 @@
+import config from '@payload-config'
+import { getPayload } from 'payload'
 import { DotWave, LineWave, Rosette } from '@/components/animations'
 
 export const metadata = { title: 'About Us — Acuv Strategy' }
+export const dynamic = 'force-dynamic'
 
-export default function Page() {
+export default async function Page() {
+  let reportUrl: string | undefined
+  try {
+    const payload = await getPayload({ config })
+    const reportRes = await payload.find({ collection: 'documents', where: { category: { equals: 'report' } }, limit: 1, sort: '-updatedAt' })
+    const reportDoc = reportRes.docs[0] as any
+    if (reportDoc && reportDoc.file && typeof reportDoc.file === 'object') {
+      reportUrl = reportDoc.file.url
+    }
+  } catch (e) {}
+
   return (
+
     <>
 <div data-screen-label="About Hero" style={{ background: '#07332C', color: '#EAF4F0', position: 'relative', overflow: 'hidden' }}>
   <div style={{ position: 'absolute', left: '0', right: '0', bottom: '0', height: '260px', opacity: '.75', WebkitMask: 'linear-gradient(to top,#000 45%,transparent)', mask: 'linear-gradient(to top,#000 45%,transparent)' }}><DotWave gap={24} amp={12} alpha={0.8} /></div>
   <div style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '24px 56px', borderBottom: '1px solid rgba(159,217,198,.18)' }}>
-    <a href="/" style={{ display: 'inline-flex', alignItems: 'center' }}><img src="/logo.png" alt="acuv Strategy" style={{ width: '150px', height: 'auto' }} /></a>
+    <a href="/" style={{ display: 'inline-flex', alignItems: 'center' }}><img src="/logo.png" alt="acuv Strategy" style={{ width: '210px', height: 'auto' }} /></a>
     <div style={{ display: 'flex', gap: '22px', fontFamily: 'var(--font-sans)', fontSize: '10.5px', letterSpacing: '.08em' }}>
       <a href="/" style={{ color: 'rgba(234,244,240,.6)' }}>01 HOME</a>
       <a href="/services" style={{ color: 'rgba(234,244,240,.6)' }}>02 SERVICES</a>
@@ -186,7 +200,8 @@ export default function Page() {
             <div style={{ fontFamily: 'var(--font-sans)', fontSize: '9.5px', letterSpacing: '.26em', color: '#9FD9C6' }}>YEARS</div>
           </div>
         </div>
-        <div style={{ marginTop: '52px', fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.12em', color: '#0A4A3F', background: '#9FD9C6', padding: '13px 24px', borderRadius: '999px', display: 'inline-block' }}>DOWNLOAD THE REPORT</div>
+        <a href={reportUrl || '#'} target={reportUrl ? '_blank' : undefined} rel={reportUrl ? 'noopener noreferrer' : undefined} style={{ marginTop: '52px', fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.12em', color: '#0A4A3F', background: '#9FD9C6', padding: '13px 24px', borderRadius: '999px', display: 'inline-block', opacity: reportUrl ? 1 : 0.5, pointerEvents: reportUrl ? 'auto' : 'none' }}>DOWNLOAD THE REPORT</a>
+
       </div>
     </div>
   </div>
@@ -209,7 +224,7 @@ export default function Page() {
     </div>
     <div style={{ marginTop: '88px', borderTop: '1px solid rgba(159,217,198,.18)', paddingTop: '40px', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: '48px', fontSize: '13px', lineHeight: '1.8', color: 'rgba(234,244,240,.55)' }}>
       <div>
-        <div style={{ marginBottom: '12px' }}><img src="/logo.png" alt="acuv Strategy" style={{ width: '132px', height: 'auto' }} /></div>
+        <div style={{ marginBottom: '12px' }}><img src="/logo.png" alt="acuv Strategy" style={{ width: '170px', height: 'auto' }} /></div>
         From Beirut to New York to the MENA region — bespoke strategy programs backed by finance with integrity.
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}><div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.22em', color: '#9FD9C6', marginBottom: '12px' }}>QUICK LINKS</div><a href="/services" style={{ color: 'rgba(234,244,240,.55)' }}>Services</a><a href="/success-stories" style={{ color: 'rgba(234,244,240,.55)' }}>Success Stories</a><a href="/thoughts" style={{ color: 'rgba(234,244,240,.55)' }}>Insights &amp; Media</a></div>
