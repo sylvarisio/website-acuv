@@ -18,7 +18,7 @@ export default async function Page() {
   <div style={{ position: 'absolute', right: '-220px', top: '-220px', width: '640px', height: '640px', border: '1px solid rgba(159,217,198,.15)', borderRadius: '50%' }}></div>
   <div style={{ position: 'absolute', right: '-140px', top: '-140px', width: '480px', height: '480px', border: '1px solid rgba(159,217,198,.12)', borderRadius: '50%' }}></div>
   <div style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '24px 56px', borderBottom: '1px solid rgba(159,217,198,.18)' }}>
-    <a href="/" style={{ fontSize: '16px', color: '#EAF4F0' }}><span style={{ fontWeight: '500' }}>acuv</span><span style={{ fontWeight: '300', letterSpacing: '.16em' }}>STRATEGY</span></a>
+    <a href="/" style={{ display: 'inline-flex', alignItems: 'center' }}><img src="/logo.png" alt="acuv Strategy" style={{ height: '24px', width: 'auto' }} /></a>
     <div style={{ display: 'flex', gap: '22px', fontFamily: 'var(--font-sans)', fontSize: '10.5px', letterSpacing: '.08em' }}>
       <a href="/" style={{ color: '#EAF4F0' }}>01 HOME</a>
       <a href="/services" style={{ color: 'rgba(234,244,240,.6)' }}>02 SERVICES</a>
@@ -185,7 +185,7 @@ export default async function Page() {
     </div>
     <div style={{ marginTop: '96px', borderTop: '1px solid rgba(159,217,198,.18)', paddingTop: '40px', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: '48px', fontSize: '13px', lineHeight: '1.8', color: 'rgba(234,244,240,.55)' }}>
       <div>
-        <div style={{ color: '#EAF4F0', fontSize: '15px', marginBottom: '12px' }}><span style={{ fontWeight: '500' }}>acuv</span><span style={{ fontWeight: '300', letterSpacing: '.16em' }}>STRATEGY</span></div>
+        <div style={{ marginBottom: '12px' }}><img src="/logo.png" alt="acuv Strategy" style={{ height: '22px', width: 'auto' }} /></div>
         From Beirut to New York to the MENA region — bespoke strategy programs backed by finance with integrity.
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}><div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.22em', color: '#9FD9C6', marginBottom: '12px' }}>QUICK LINKS</div><a href="/services" style={{ color: 'rgba(234,244,240,.55)' }}>Services</a><a href="/success-stories" style={{ color: 'rgba(234,244,240,.55)' }}>Success Stories</a><a href="/thoughts" style={{ color: 'rgba(234,244,240,.55)' }}>Insights &amp; Media</a></div>

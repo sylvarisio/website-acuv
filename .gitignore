@@ -6,3 +6,8 @@ data/*.db-*
 media
 *.log
 .DS_Store
+
+# Source assets (large binaries kept locally, not in repo)
+assets/
+gitout.txt
+acuvStrategy Logo*.png

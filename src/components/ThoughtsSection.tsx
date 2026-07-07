@@ -17,28 +17,30 @@ export default function ThoughtsSection({ thoughts }: { thoughts: any[] }) {
             LATEST
           </div>
           <div style={{ borderTop: '1px solid #122A24', paddingTop: 32 }}>
-            <div style={{ background: '#0A4A3F', color: '#EAF4F0', position: 'relative', overflow: 'hidden', padding: 64, display: 'grid', gridTemplateColumns: '1fr 240px', gap: 56, alignItems: 'end' }}>
-              <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(159,217,198,.12) 1px,transparent 1px)', backgroundSize: '14px 14px', animation: 'acv-drift 30s linear infinite' }} />
-              <div style={{ position: 'absolute', right: -60, top: -60, display: 'flex', opacity: 0.55, pointerEvents: 'none' }}>
-                <div style={{ width: 200, height: 200, borderRadius: '50%', background: 'rgba(159,217,198,.12)' }} />
-                <div style={{ width: 200, height: 200, borderRadius: '50%', background: 'rgba(159,217,198,.2)', marginLeft: -110 }} />
-              </div>
-              <div style={{ position: 'relative' }}>
-                <div style={{ fontFamily: 'var(--font-sans)', fontSize: 10, letterSpacing: '.2em', color: '#9FD9C6', marginBottom: 18 }}>
-                  THOUGHT LEADERSHIP — {pad(featured.tlNumber)}
+            <a href={`/thoughts/${featured.id}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+              <div style={{ background: '#0A4A3F', color: '#EAF4F0', position: 'relative', overflow: 'hidden', padding: 64, display: 'grid', gridTemplateColumns: '1fr 240px', gap: 56, alignItems: 'end' }}>
+                <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(159,217,198,.12) 1px,transparent 1px)', backgroundSize: '14px 14px', animation: 'acv-drift 30s linear infinite' }} />
+                <div style={{ position: 'absolute', right: -60, top: -60, display: 'flex', opacity: 0.55, pointerEvents: 'none' }}>
+                  <div style={{ width: 200, height: 200, borderRadius: '50%', background: 'rgba(159,217,198,.12)' }} />
+                  <div style={{ width: 200, height: 200, borderRadius: '50%', background: 'rgba(159,217,198,.2)', marginLeft: -110 }} />
                 </div>
-                <div style={{ fontSize: 40, fontWeight: 300, lineHeight: 1.15, letterSpacing: '-.015em', maxWidth: 620 }}>{featured.title}</div>
-                {featured.excerpt || featured.subtitle ? (
-                  <p style={{ margin: '20px 0 0', fontSize: 14.5, lineHeight: 1.8, color: 'rgba(234,244,240,.65)', maxWidth: 540 }}>
-                    {featured.subtitle ? featured.subtitle + '. ' : ''}
-                    {featured.excerpt}
-                  </p>
-                ) : null}
+                <div style={{ position: 'relative' }}>
+                  <div style={{ fontFamily: 'var(--font-sans)', fontSize: 10, letterSpacing: '.2em', color: '#9FD9C6', marginBottom: 18 }}>
+                    THOUGHT LEADERSHIP — {pad(featured.tlNumber)}
+                  </div>
+                  <div style={{ fontSize: 40, fontWeight: 300, lineHeight: 1.15, letterSpacing: '-.015em', maxWidth: 620 }}>{featured.title}</div>
+                  {featured.excerpt || featured.subtitle ? (
+                    <p style={{ margin: '20px 0 0', fontSize: 14.5, lineHeight: 1.8, color: 'rgba(234,244,240,.65)', maxWidth: 540, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                      {featured.subtitle ? featured.subtitle + '. ' : ''}
+                      {featured.excerpt}
+                    </p>
+                  ) : null}
+                </div>
+                <div style={{ position: 'relative', justifySelf: 'end', fontFamily: 'var(--font-sans)', fontSize: 11, letterSpacing: '.12em', color: '#0A4A3F', background: '#9FD9C6', padding: '13px 24px', borderRadius: 999 }}>
+                  READ →
+                </div>
               </div>
-              <div style={{ position: 'relative', justifySelf: 'end', fontFamily: 'var(--font-sans)', fontSize: 11, letterSpacing: '.12em', color: '#0A4A3F', background: '#9FD9C6', padding: '13px 24px', borderRadius: 999 }}>
-                READ →
-              </div>
-            </div>
+            </a>
           </div>
         </div>
       ) : null}
@@ -50,11 +52,11 @@ export default function ThoughtsSection({ thoughts }: { thoughts: any[] }) {
         </div>
         <div style={{ borderTop: '1px solid #122A24', paddingTop: 8, display: 'flex', flexDirection: 'column' }}>
           {rest.map((t) => (
-            <div key={t.id} style={{ display: 'grid', gridTemplateColumns: '100px 1fr 30px', gap: 32, alignItems: 'baseline', padding: '24px 0', borderBottom: '1px solid rgba(18,42,36,.12)' }}>
+            <a key={t.id} href={`/thoughts/${t.id}`} style={{ textDecoration: 'none', color: 'inherit', display: 'grid', gridTemplateColumns: '100px 1fr 30px', gap: 32, alignItems: 'baseline', padding: '24px 0', borderBottom: '1px solid rgba(18,42,36,.12)' }}>
               <div style={{ fontFamily: 'var(--font-sans)', fontSize: 11, letterSpacing: '.1em', color: 'rgba(18,42,36,.45)' }}>TL — {pad(t.tlNumber)}</div>
               <div style={{ fontSize: 22, fontWeight: 400 }}>{t.title}</div>
               <div style={{ color: '#0E6B5A', fontSize: 18 }}>↗</div>
-            </div>
+            </a>
           ))}
           {rest.length === 0 ? (
             <div style={{ padding: '24px 0', fontSize: 14, color: 'rgba(18,42,36,.5)' }}>
