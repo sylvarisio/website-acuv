@@ -65,7 +65,8 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.2em', color: '#0E6B5A', marginBottom: '32px' }}>START THE CONVERSATION</div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '28px' }}>
+      <div className="acv-cols-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '28px' }}>
+
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
           <label style={labelStyle}>NAME</label>
           <input type="text" placeholder="Your name" value={name} onChange={(e) => setName(e.target.value)} style={fieldStyle} />

@@ -1,6 +1,8 @@
 import config from '@payload-config'
 import { getPayload } from 'payload'
 import { DotWave, LineWave, Rosette } from '@/components/animations'
+import SiteNav from '@/components/SiteNav'
+import SiteFooter from '@/components/SiteFooter'
 
 export const metadata = { title: 'About Us — Acuv Strategy' }
 export const dynamic = 'force-dynamic'
@@ -21,21 +23,10 @@ export default async function Page() {
     <>
 <div data-screen-label="About Hero" style={{ background: '#07332C', color: '#EAF4F0', position: 'relative', overflow: 'hidden' }}>
   <div style={{ position: 'absolute', left: '0', right: '0', bottom: '0', height: '260px', opacity: '.75', WebkitMask: 'linear-gradient(to top,#000 45%,transparent)', mask: 'linear-gradient(to top,#000 45%,transparent)' }}><DotWave gap={24} amp={12} alpha={0.8} /></div>
-  <div style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '24px 56px', borderBottom: '1px solid rgba(159,217,198,.18)' }}>
-    <a href="/" style={{ display: 'inline-flex', alignItems: 'center' }}><img src="/logo.png" alt="acuv Strategy" style={{ width: '210px', height: 'auto' }} /></a>
-    <div style={{ display: 'flex', gap: '22px', fontFamily: 'var(--font-sans)', fontSize: '10.5px', letterSpacing: '.08em' }}>
-      <a href="/" style={{ color: 'rgba(234,244,240,.6)' }}>01 HOME</a>
-      <a href="/services" style={{ color: 'rgba(234,244,240,.6)' }}>02 SERVICES</a>
-      <a href="/about" style={{ color: '#EAF4F0' }}>03 ABOUT</a>
-      <a href="/engagement-model" style={{ color: 'rgba(234,244,240,.6)' }}>04 ENGAGEMENT</a>
-      <a href="/success-stories" style={{ color: 'rgba(234,244,240,.6)' }}>05 STORIES</a>
-      <a href="/thoughts" style={{ color: 'rgba(234,244,240,.6)' }}>06 THOUGHTS</a>
-    </div>
-    <a href="/contact" style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.1em', color: '#9FD9C6', border: '1px solid rgba(159,217,198,.5)', padding: '9px 20px', borderRadius: '999px' }}>CONTACT ↗</a>
-  </div>
-  <div style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '88px 56px 180px' }}>
+  <SiteNav active="about" />
+  <div className="acv-pad" style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '88px 56px 180px' }}>
     <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.22em', color: '#9FD9C6', marginBottom: '24px' }}>03 — OUR STORY</div>
-    <div style={{ fontWeight: '300', fontSize: '68px', lineHeight: '1.05', letterSpacing: '-.025em', maxWidth: '860px', textWrap: 'pretty' }}>Building <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', fontWeight: '400', color: '#9FD9C6' }}>confident growth</span></div>
+    <div className="acv-h-lg" style={{ fontWeight: '300', fontSize: '68px', lineHeight: '1.05', letterSpacing: '-.025em', maxWidth: '860px', textWrap: 'pretty' }}>Building <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', fontWeight: '400', color: '#9FD9C6' }}>confident growth</span></div>
     <p style={{ margin: '28px 0 0', fontSize: '15px', lineHeight: '1.75', color: 'rgba(234,244,240,.6)', maxWidth: '600px' }}>From Beirut to New York to the MENA region, we guide privately owned businesses to confident growth. We blend market insights with our mastery in business leadership to tailor innovative growth plans.</p>
   </div>
 </div>
@@ -52,9 +43,9 @@ export default async function Page() {
 </div>
 
 
-<div data-screen-label="Clarity" style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
+<div className="acv-pad acv-section" data-screen-label="Clarity" style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
   <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.14em', color: 'rgba(18,42,36,.4)' }}>01 /<br />CLARITY</div>
-  <div style={{ borderTop: '1px solid #122A24', paddingTop: '32px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px' }}>
+  <div className="acv-duo" style={{ borderTop: '1px solid #122A24', paddingTop: '32px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px' }}>
     <div style={{ fontSize: '34px', fontWeight: '300', lineHeight: '1.3', letterSpacing: '-.015em' }}><span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>Clarity</span> over ambiguity. <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>Confidence</span> over uncertainty.</div>
     <div style={{ paddingTop: '8px' }}>
       <p style={{ margin: '0', fontSize: '14.5px', lineHeight: '1.8', color: 'rgba(18,42,36,.65)' }}>We help businesses move from ambiguity to clarity, from insight to action. Whether the business is facing generational friction, scaling ambitions, or financial uncertainty, we architect growth through strategy, execution, and finance.</p>
@@ -64,9 +55,9 @@ export default async function Page() {
 </div>
 
 
-<div data-screen-label="Journey" style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
+<div className="acv-pad acv-section" data-screen-label="Journey" style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
   <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.14em', color: 'rgba(18,42,36,.4)' }}>02 /<br />JOURNEY</div>
-  <div style={{ borderTop: '1px solid #122A24', paddingTop: '0', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+  <div className="acv-cols-3" style={{ borderTop: '1px solid #122A24', paddingTop: '0', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
     <div style={{ padding: '48px 40px 48px 0', borderRight: '1px solid rgba(18,42,36,.12)' }}>
       <div style={{ fontWeight: '300', fontSize: '56px', letterSpacing: '-.02em', color: '#0A4A3F' }}>2016</div>
       <div style={{ marginTop: '14px', fontSize: '15px', fontWeight: '500' }}>Born in Beirut</div>
@@ -86,9 +77,9 @@ export default async function Page() {
 </div>
 
 
-<div data-screen-label="Numbers" style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
+<div className="acv-pad acv-section" data-screen-label="Numbers" style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
   <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.14em', color: 'rgba(18,42,36,.4)' }}>03 /<br />NUMBERS</div>
-  <div style={{ borderTop: '1px solid #122A24', paddingTop: '0', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr' }}>
+  <div className="acv-cols-4" style={{ borderTop: '1px solid #122A24', paddingTop: '0', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr' }}>
     <div style={{ padding: '40px 36px 40px 0', borderRight: '1px solid rgba(18,42,36,.12)' }}><div style={{ fontWeight: '300', fontSize: '64px', letterSpacing: '-.02em' }}>18</div><div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.22em', color: 'rgba(18,42,36,.5)', marginTop: '8px' }}>COUNTRIES</div></div>
     <div style={{ padding: '40px 36px', borderRight: '1px solid rgba(18,42,36,.12)' }}><div style={{ fontWeight: '300', fontSize: '64px', letterSpacing: '-.02em' }}>87</div><div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.22em', color: 'rgba(18,42,36,.5)', marginTop: '8px' }}>ENGAGEMENTS</div></div>
     <div style={{ padding: '40px 36px', borderRight: '1px solid rgba(18,42,36,.12)' }}><div style={{ fontWeight: '300', fontSize: '64px', letterSpacing: '-.02em' }}>59</div><div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.22em', color: 'rgba(18,42,36,.5)', marginTop: '8px' }}>SECTORS</div></div>
@@ -107,12 +98,12 @@ export default async function Page() {
 
 <div data-screen-label="Belief" style={{ position: 'relative', overflow: 'hidden' }}>
   <div style={{ position: 'absolute', right: '0', top: '0', bottom: '0', width: '36%', backgroundImage: 'radial-gradient(rgba(10,74,63,.14) 1px,transparent 1px)', backgroundSize: '14px 14px', WebkitMask: 'linear-gradient(to left,#000 30%,transparent)', mask: 'linear-gradient(to left,#000 30%,transparent)', animation: 'acv-drift 24s linear infinite' }}></div>
-  <div style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
+  <div className="acv-pad acv-section" style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
     <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.14em', color: 'rgba(18,42,36,.4)' }}>04 /<br />BELIEF</div>
     <div style={{ borderTop: '1px solid #122A24', paddingTop: '32px' }}>
       <div style={{ fontSize: '36px', fontWeight: '300', letterSpacing: '-.015em', marginBottom: '24px' }}>We believe in <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>confident growth</span></div>
       <div style={{ position: 'relative', height: '110px', margin: '0 0 40px', overflow: 'hidden' }}><LineWave /></div>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '24px' }}>
+      <div className="acv-cols-3" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '24px' }}>
         <div style={{ background: '#fff', border: '1px solid rgba(18,42,36,.1)', padding: '36px 32px' }}>
           <div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.24em', color: '#0E6B5A', marginBottom: '16px' }}>01 — MASTERY</div>
           <div style={{ fontSize: '14px', lineHeight: '1.75', color: 'rgba(18,42,36,.7)' }}>We refine excellence. From strategy rooms to execution trenches, we bring depth, precision, and relentless craftsmanship to every challenge.</div>
@@ -126,7 +117,7 @@ export default async function Page() {
           <div style={{ fontSize: '14px', lineHeight: '1.75', color: 'rgba(18,42,36,.7)' }}>We stay alert. We listen to markets, anticipate shifts, and protect our clients' interests with eyes wide open and ears tuned to nuance.</div>
         </div>
       </div>
-      <div style={{ marginTop: '24px', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '24px' }}>
+      <div className="acv-cols-3" style={{ marginTop: '24px', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '24px' }}>
         <div style={{ borderTop: '1px solid #122A24', paddingTop: '20px' }}>
           <div style={{ fontSize: '19px', fontWeight: '400', marginBottom: '8px' }}>Bespoke</div>
           <div style={{ fontSize: '13.5px', lineHeight: '1.7', color: 'rgba(18,42,36,.6)' }}>We treat each and every business on its own capabilities to define ambitious yet executable growth strategies.</div>
@@ -145,10 +136,10 @@ export default async function Page() {
 </div>
 
 
-<div data-screen-label="Mission" style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
+<div className="acv-pad acv-section" data-screen-label="Mission" style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
   <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.14em', color: 'rgba(18,42,36,.4)' }}>05 /<br />MISSION</div>
   <div style={{ borderTop: '1px solid #122A24', paddingTop: '32px' }}>
-    <div style={{ background: '#0A4A3F', color: '#EAF4F0', position: 'relative', overflow: 'hidden', padding: '64px' }}>
+    <div className="acv-band" style={{ background: '#0A4A3F', color: '#EAF4F0', position: 'relative', overflow: 'hidden', padding: '64px' }}>
       <div style={{ position: 'absolute', right: '-40px', top: '50%', transform: 'translateY(-50%)', width: '300px', height: '300px', opacity: '.7' }}><Rosette stroke="rgba(159,217,198,.35)" /></div>
       <div style={{ position: 'relative', fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.2em', color: '#9FD9C6', marginBottom: '20px' }}>OUR MISSION</div>
       <div style={{ position: 'relative', fontSize: '32px', fontWeight: '300', lineHeight: '1.3', maxWidth: '640px' }}>Architecting <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#9FD9C6' }}>confidence</span>, executing <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#9FD9C6' }}>clarity</span>.</div>
@@ -158,11 +149,11 @@ export default async function Page() {
 </div>
 
 
-<div data-screen-label="Partners" style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
+<div className="acv-pad acv-section" data-screen-label="Partners" style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
   <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.14em', color: 'rgba(18,42,36,.4)' }}>06 /<br />PARTNERS</div>
   <div style={{ borderTop: '1px solid #122A24', paddingTop: '32px' }}>
     <div style={{ fontSize: '36px', fontWeight: '300', letterSpacing: '-.015em', marginBottom: '48px' }}>Meet the <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>partners</span></div>
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+    <div className="acv-cols-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
       <div style={{ background: '#fff', border: '1px solid rgba(18,42,36,.1)', padding: '44px 40px' }}>
         <div style={{ width: '88px', height: '88px', borderRadius: '50%', background: 'repeating-linear-gradient(-45deg,#0A4A3F 0,#0A4A3F 6px,#0C5347 6px,#0C5347 12px)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '24px' }}><span style={{ fontFamily: 'var(--font-sans)', fontSize: '9px', letterSpacing: '.1em', color: '#9FD9C6' }}>PHOTO</span></div>
         <div style={{ fontSize: '22px', fontWeight: '400' }}>Bill Elias Taha</div>
@@ -180,10 +171,10 @@ export default async function Page() {
 </div>
 
 
-<div data-screen-label="Decade" style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 96px', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
+<div className="acv-pad acv-section" data-screen-label="Decade" style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 96px', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
   <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.14em', color: 'rgba(18,42,36,.4)' }}>07 /<br />DECADE</div>
   <div style={{ borderTop: '1px solid #122A24', paddingTop: '32px' }}>
-    <div style={{ background: '#0A4A3F', color: '#EAF4F0', position: 'relative', overflow: 'hidden', padding: '64px', display: 'grid', gridTemplateColumns: '1fr 300px', gap: '64px', alignItems: 'center' }}>
+    <div className="acv-band acv-duo" style={{ background: '#0A4A3F', color: '#EAF4F0', position: 'relative', overflow: 'hidden', padding: '64px', display: 'grid', gridTemplateColumns: '1fr 300px', gap: '64px', alignItems: 'center' }}>
       <div style={{ position: 'absolute', right: '-160px', top: '50%', transform: 'translateY(-50%)', width: '480px', height: '480px', border: '1px solid rgba(159,217,198,.25)', borderRadius: '50%' }}></div>
       <div style={{ position: 'absolute', right: '-100px', top: '50%', transform: 'translateY(-50%)', width: '370px', height: '370px', border: '1px solid rgba(159,217,198,.2)', borderRadius: '50%' }}></div>
       <div style={{ position: 'relative' }}>
@@ -201,7 +192,6 @@ export default async function Page() {
           </div>
         </div>
         <a href={reportUrl || '#'} target={reportUrl ? '_blank' : undefined} rel={reportUrl ? 'noopener noreferrer' : undefined} style={{ marginTop: '52px', fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.12em', color: '#0A4A3F', background: '#9FD9C6', padding: '13px 24px', borderRadius: '999px', display: 'inline-block', opacity: reportUrl ? 1 : 0.5, pointerEvents: reportUrl ? 'auto' : 'none' }}>DOWNLOAD THE REPORT</a>
-
       </div>
     </div>
   </div>
@@ -211,27 +201,18 @@ export default async function Page() {
 <div data-screen-label="CTA" style={{ background: '#07332C', color: '#EAF4F0', position: 'relative', overflow: 'hidden' }}>
   <div style={{ position: 'absolute', right: '-200px', bottom: '-260px', width: '620px', height: '620px', border: '1px solid rgba(159,217,198,.18)', borderRadius: '50%' }}></div>
   <div style={{ position: 'absolute', right: '-140px', bottom: '-200px', width: '470px', height: '470px', border: '1px solid rgba(159,217,198,.14)', borderRadius: '50%' }}></div>
-  <div style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 96px' }}>
-    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: '64px', borderTop: '1px solid rgba(159,217,198,.25)', paddingTop: '48px' }}>
-      <div style={{ fontWeight: '300', fontSize: '60px', lineHeight: '1.08', letterSpacing: '-.025em' }}>Let's make things<br /><span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', fontWeight: '400', color: '#9FD9C6' }}>happen</span></div>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '24px' }}>
+  <div className="acv-pad" style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 96px' }}>
+    <div className="acv-cta" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: '64px', borderTop: '1px solid rgba(159,217,198,.25)', paddingTop: '48px' }}>
+      <div className="acv-h-md" style={{ fontWeight: '300', fontSize: '60px', lineHeight: '1.08', letterSpacing: '-.025em' }}>Let's make things<br /><span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', fontWeight: '400', color: '#9FD9C6' }}>happen</span></div>
+      <div className="acv-cta-side" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '24px' }}>
         <p style={{ margin: '0', fontSize: '14px', color: 'rgba(234,244,240,.6)', maxWidth: '280px', textAlign: 'right' }}>See how we engage — or start the conversation.</p>
-        <div style={{ display: 'flex', gap: '16px' }}>
+        <div className="acv-cta-actions" style={{ display: 'flex', gap: '16px' }}>
           <a href="/engagement-model" style={{ fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.14em', color: '#9FD9C6', border: '1px solid rgba(159,217,198,.5)', padding: '15px 28px', borderRadius: '999px' }}>ENGAGEMENT MODEL</a>
           <a href="/contact" style={{ fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.14em', color: '#07332C', background: '#9FD9C6', padding: '16px 32px', borderRadius: '999px' }}>CONTACT US ↗</a>
         </div>
       </div>
     </div>
-    <div style={{ marginTop: '88px', borderTop: '1px solid rgba(159,217,198,.18)', paddingTop: '40px', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: '48px', fontSize: '13px', lineHeight: '1.8', color: 'rgba(234,244,240,.55)' }}>
-      <div>
-        <div style={{ marginBottom: '12px' }}><img src="/logo.png" alt="acuv Strategy" style={{ width: '170px', height: 'auto' }} /></div>
-        From Beirut to New York to the MENA region — bespoke strategy programs backed by finance with integrity.
-      </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}><div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.22em', color: '#9FD9C6', marginBottom: '12px' }}>QUICK LINKS</div><a href="/services" style={{ color: 'rgba(234,244,240,.55)' }}>Services</a><a href="/success-stories" style={{ color: 'rgba(234,244,240,.55)' }}>Success Stories</a><a href="/thoughts" style={{ color: 'rgba(234,244,240,.55)' }}>Insights &amp; Media</a></div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}><div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.22em', color: '#9FD9C6', marginBottom: '12px' }}>COMPANY</div><a href="/about" style={{ color: 'rgba(234,244,240,.55)' }}>About Us</a><a href="/engagement-model" style={{ color: 'rgba(234,244,240,.55)' }}>Engagement Model</a><a href="/contact" style={{ color: 'rgba(234,244,240,.55)' }}>Contact Us</a></div>
-      <div><div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.22em', color: '#9FD9C6', marginBottom: '12px' }}>CONTACT</div>64 Bleecker St, Suite 405<br />New York, NY 10012<br />+1 (917) 695 4747<br />info@acuvstrategy.com</div>
-    </div>
-    <div style={{ marginTop: '48px', fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.14em', color: 'rgba(234,244,240,.35)' }}>© 2026 ACUV STRATEGY. ALL RIGHTS RESERVED.</div>
+    <SiteFooter />
   </div>
 </div>
     </>

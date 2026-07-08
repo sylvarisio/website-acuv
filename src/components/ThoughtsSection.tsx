@@ -11,14 +11,14 @@ export default function ThoughtsSection({ thoughts }: { thoughts: any[] }) {
   return (
     <>
       {featured ? (
-        <div data-screen-label="Featured" style={{ maxWidth: 1200, margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: 40 }}>
+        <div className="acv-pad acv-section" data-screen-label="Featured" style={{ maxWidth: 1200, margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: 40 }}>
           <div style={{ fontFamily: 'var(--font-sans)', fontSize: 11, letterSpacing: '.14em', color: 'rgba(18,42,36,.4)' }}>
             01 /<br />
             LATEST
           </div>
           <div style={{ borderTop: '1px solid #122A24', paddingTop: 32 }}>
             <a href={`/thoughts/${featured.id}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
-              <div style={{ background: '#0A4A3F', color: '#EAF4F0', position: 'relative', overflow: 'hidden', padding: 64, display: 'grid', gridTemplateColumns: '1fr 240px', gap: 56, alignItems: 'end' }}>
+              <div className="acv-band acv-duo" style={{ background: '#0A4A3F', color: '#EAF4F0', position: 'relative', overflow: 'hidden', padding: 64, display: 'grid', gridTemplateColumns: '1fr 240px', gap: 56, alignItems: 'end' }}>
                 <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(159,217,198,.12) 1px,transparent 1px)', backgroundSize: '14px 14px', animation: 'acv-drift 30s linear infinite' }} />
                 <div style={{ position: 'absolute', right: -60, top: -60, display: 'flex', opacity: 0.55, pointerEvents: 'none' }}>
                   <div style={{ width: 200, height: 200, borderRadius: '50%', background: 'rgba(159,217,198,.12)' }} />
@@ -45,7 +45,7 @@ export default function ThoughtsSection({ thoughts }: { thoughts: any[] }) {
         </div>
       ) : null}
 
-      <div data-screen-label="Archive" style={{ maxWidth: 1200, margin: '0 auto', padding: '88px 56px 96px', display: 'grid', gridTemplateColumns: '120px 1fr', gap: 40 }}>
+      <div className="acv-pad acv-section" data-screen-label="Archive" style={{ maxWidth: 1200, margin: '0 auto', padding: '88px 56px 96px', display: 'grid', gridTemplateColumns: '120px 1fr', gap: 40 }}>
         <div style={{ fontFamily: 'var(--font-sans)', fontSize: 11, letterSpacing: '.14em', color: 'rgba(18,42,36,.4)' }}>
           02 /<br />
           ARCHIVE
