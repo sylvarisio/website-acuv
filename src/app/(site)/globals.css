@@ -55,13 +55,10 @@
   --font-sans: 'Neometric', 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html {
   -webkit-text-size-adjust: 100%;
 }
+
 
 body {
   margin: 0;
@@ -179,11 +176,18 @@ textarea::placeholder {
 .acv-h-sm { font-size: clamp(26px, 5vw, 42px) !important; }
 
 @media (max-width: 1024px) {
+  /* Scope border-box to tablet/mobile only so desktop keeps its original
+     content-box widths (padding sits outside the 1200px bands). */
+  .acv-pad,
+  .acv-nav,
+  .acv-band,
+  .acv-footer { box-sizing: border-box; }
   .acv-pad { padding-left: 40px !important; padding-right: 40px !important; }
   .acv-cols-4 { grid-template-columns: 1fr 1fr !important; }
   .acv-duo { grid-template-columns: 1fr !important; gap: 40px !important; }
   .acv-band { padding-left: 44px !important; padding-right: 44px !important; }
 }
+
 
 @media (max-width: 900px) {
   .acv-section { grid-template-columns: 1fr !important; gap: 16px !important; }
