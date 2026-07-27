@@ -30,7 +30,7 @@ export default function Page() {
     </div>
     <div style={{ fontSize: '36px', fontWeight: '300', letterSpacing: '-.015em', marginBottom: '40px' }}>Strategy programs <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>guiding the journey</span></div>
 
-    <div className="acv-section" style={{ display: 'grid', gridTemplateColumns: '64px 1fr 1fr', gap: '40px', padding: '40px 0', borderTop: '1px solid rgba(18,42,36,.12)' }}>
+    <a href="/services/change-the-game" className="acv-section" style={{ textDecoration: 'none', color: 'inherit', display: 'grid', gridTemplateColumns: '64px 1fr 1fr 30px', gap: '40px', padding: '40px 0', borderTop: '1px solid rgba(18,42,36,.12)', alignItems: 'center' }}>
       <div style={{ width: '44px', height: '44px', border: '1px solid #0E6B5A', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-sans)', fontSize: '11px', color: '#0E6B5A' }}>A</div>
       <div>
         <div style={{ fontSize: '26px', fontWeight: '400' }}>Change the Game</div>
@@ -39,9 +39,10 @@ export default function Page() {
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <p style={{ margin: '0', fontSize: '15px', lineHeight: '1.75', color: 'rgba(18,42,36,.65)' }}>Vision Clarity for multi-generational businesses.</p>
       </div>
-    </div>
+      <div style={{ color: '#0E6B5A', fontSize: '18px' }}>↗</div>
+    </a>
 
-    <div className="acv-section" style={{ display: 'grid', gridTemplateColumns: '64px 1fr 1fr', gap: '40px', padding: '40px 0', borderTop: '1px solid rgba(18,42,36,.12)' }}>
+    <a href="/services/business-engineering" className="acv-section" style={{ textDecoration: 'none', color: 'inherit', display: 'grid', gridTemplateColumns: '64px 1fr 1fr 30px', gap: '40px', padding: '40px 0', borderTop: '1px solid rgba(18,42,36,.12)', alignItems: 'center' }}>
       <div style={{ width: '44px', height: '44px', border: '1px solid #0E6B5A', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-sans)', fontSize: '11px', color: '#0E6B5A' }}>B</div>
       <div>
         <div style={{ fontSize: '26px', fontWeight: '400' }}>Business Engineering</div>
@@ -50,9 +51,10 @@ export default function Page() {
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <p style={{ margin: '0', fontSize: '15px', lineHeight: '1.75', color: 'rgba(18,42,36,.65)' }}>Growth Targeting for early-stage ventures.</p>
       </div>
-    </div>
+      <div style={{ color: '#0E6B5A', fontSize: '18px' }}>↗</div>
+    </a>
 
-    <div className="acv-section" style={{ display: 'grid', gridTemplateColumns: '64px 1fr 1fr', gap: '40px', padding: '40px 0', borderTop: '1px solid rgba(18,42,36,.12)', borderBottom: '1px solid rgba(18,42,36,.12)' }}>
+    <a href="/services/launch-with-confidence" className="acv-section" style={{ textDecoration: 'none', color: 'inherit', display: 'grid', gridTemplateColumns: '64px 1fr 1fr 30px', gap: '40px', padding: '40px 0', borderTop: '1px solid rgba(18,42,36,.12)', borderBottom: '1px solid rgba(18,42,36,.12)', alignItems: 'center' }}>
       <div style={{ width: '44px', height: '44px', border: '1px solid #0E6B5A', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-sans)', fontSize: '11px', color: '#0E6B5A' }}>C</div>
       <div>
         <div style={{ fontSize: '26px', fontWeight: '400' }}>Launch with Confidence</div>
@@ -61,7 +63,8 @@ export default function Page() {
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <p style={{ margin: '0', fontSize: '15px', lineHeight: '1.75', color: 'rgba(18,42,36,.65)' }}>GTM Success for new markets &amp; products.</p>
       </div>
-    </div>
+      <div style={{ color: '#0E6B5A', fontSize: '18px' }}>↗</div>
+    </a>
   </div>
 </div>
 
@@ -72,22 +75,25 @@ export default function Page() {
     <div style={{ fontSize: '36px', fontWeight: '300', letterSpacing: '-.015em', marginBottom: '16px' }}>Corporate finance <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>services</span></div>
     <p style={{ margin: '0 0 48px', fontSize: '14px', lineHeight: '1.75', color: 'rgba(18,42,36,.6)', maxWidth: '560px' }}>Our execution services are a testament of our commitment to achieving results.</p>
     <div className="acv-cols-3" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '24px' }}>
-      <div style={{ background: '#fff', border: '1px solid rgba(18,42,36,.1)', padding: '36px 32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+      <a href="/services/financial-engineering" style={{ textDecoration: 'none', color: 'inherit', background: '#fff', border: '1px solid rgba(18,42,36,.1)', padding: '36px 32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
         <div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.2em', color: '#0E6B5A' }}>01</div>
         <div style={{ fontSize: '20px' }}>Financial Engineering</div>
         <div style={{ fontSize: '13.5px', lineHeight: '1.7', color: 'rgba(18,42,36,.6)' }}>Visibility for decision-making.</div>
-      </div>
-      <div style={{ background: '#fff', border: '1px solid rgba(18,42,36,.1)', padding: '36px 32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+        <div style={{ marginTop: 'auto', fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.14em', color: '#0E6B5A' }}>LEARN MORE ↗</div>
+      </a>
+      <a href="/services/mergers-acquisition" style={{ textDecoration: 'none', color: 'inherit', background: '#fff', border: '1px solid rgba(18,42,36,.1)', padding: '36px 32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
         <div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.2em', color: '#0E6B5A' }}>02</div>
         <div style={{ fontSize: '20px' }}>Mergers &amp; Acquisitions</div>
         <div style={{ fontSize: '13.5px', lineHeight: '1.7', color: 'rgba(18,42,36,.6)' }}>Credibility in every deal.</div>
-      </div>
-      <div style={{ background: '#0A4A3F', color: '#EAF4F0', padding: '36px 32px', display: 'flex', flexDirection: 'column', gap: '12px', position: 'relative', overflow: 'hidden' }}>
+        <div style={{ marginTop: 'auto', fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.14em', color: '#0E6B5A' }}>LEARN MORE ↗</div>
+      </a>
+      <a href="/services/investment-capital-funding" style={{ textDecoration: 'none', background: '#0A4A3F', color: '#EAF4F0', padding: '36px 32px', display: 'flex', flexDirection: 'column', gap: '12px', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: '0', backgroundImage: 'radial-gradient(rgba(159,217,198,.16) 1px,transparent 1px)', backgroundSize: '14px 14px', animation: 'acv-drift 30s linear infinite' }}></div>
         <div style={{ position: 'relative', fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.2em', color: '#9FD9C6' }}>03</div>
         <div style={{ position: 'relative', fontSize: '20px' }}>Investment &amp; Capital Funding</div>
         <div style={{ position: 'relative', fontSize: '13.5px', lineHeight: '1.7', color: 'rgba(234,244,240,.65)' }}>Clarity for growth.</div>
-      </div>
+        <div style={{ position: 'relative', marginTop: 'auto', fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.14em', color: '#9FD9C6' }}>LEARN MORE ↗</div>
+      </a>
     </div>
   </div>
 </div>
