@@ -46,6 +46,14 @@ export default buildConfig({
       access: { read: anyone, create: authenticated, update: authenticated, delete: authenticated },
       fields: [
         { name: 'title', type: 'text', required: true },
+        {
+          name: 'slug',
+          type: 'text',
+          required: true,
+          unique: true,
+          index: true,
+          admin: { description: 'URL path of the article, e.g. "manufacturing-the-future" → /thoughts/manufacturing-the-future' },
+        },
         { name: 'tlNumber', label: 'Thought Leadership #', type: 'number', required: true },
         { name: 'subtitle', type: 'text' },
         { name: 'excerpt', type: 'textarea' },

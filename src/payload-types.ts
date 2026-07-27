@@ -177,6 +177,10 @@ export interface Media {
 export interface Thought {
   id: number;
   title: string;
+  /**
+   * URL path of the article, e.g. "manufacturing-the-future" → /thoughts/manufacturing-the-future
+   */
+  slug: string;
   tlNumber: number;
   subtitle?: string | null;
   excerpt?: string | null;
@@ -383,6 +387,7 @@ export interface MediaSelect<T extends boolean = true> {
  */
 export interface ThoughtsSelect<T extends boolean = true> {
   title?: T;
+  slug?: T;
   tlNumber?: T;
   subtitle?: T;
   excerpt?: T;

@@ -17,7 +17,7 @@ export default function ThoughtsSection({ thoughts }: { thoughts: any[] }) {
             LATEST
           </div>
           <div style={{ borderTop: '1px solid #122A24', paddingTop: 32 }}>
-            <a href={`/thoughts/${featured.id}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+            <a href={`/thoughts/${featured.slug ?? featured.id}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
               <div className="acv-band acv-duo" style={{ background: '#0A4A3F', color: '#EAF4F0', position: 'relative', overflow: 'hidden', padding: 64, display: 'grid', gridTemplateColumns: '1fr 240px', gap: 56, alignItems: 'end' }}>
                 <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(rgba(159,217,198,.12) 1px,transparent 1px)', backgroundSize: '14px 14px', animation: 'acv-drift 30s linear infinite' }} />
                 <div style={{ position: 'absolute', right: -60, top: -60, display: 'flex', opacity: 0.55, pointerEvents: 'none' }}>
@@ -52,7 +52,7 @@ export default function ThoughtsSection({ thoughts }: { thoughts: any[] }) {
         </div>
         <div style={{ borderTop: '1px solid #122A24', paddingTop: 8, display: 'flex', flexDirection: 'column' }}>
           {rest.map((t) => (
-            <a key={t.id} href={`/thoughts/${t.id}`} style={{ textDecoration: 'none', color: 'inherit', display: 'grid', gridTemplateColumns: '100px 1fr 30px', gap: 32, alignItems: 'baseline', padding: '24px 0', borderBottom: '1px solid rgba(18,42,36,.12)' }}>
+            <a key={t.id} href={`/thoughts/${t.slug ?? t.id}`} style={{ textDecoration: 'none', color: 'inherit', display: 'grid', gridTemplateColumns: '100px 1fr 30px', gap: 32, alignItems: 'baseline', padding: '24px 0', borderBottom: '1px solid rgba(18,42,36,.12)' }}>
               <div style={{ fontFamily: 'var(--font-sans)', fontSize: 11, letterSpacing: '.1em', color: 'rgba(18,42,36,.45)' }}>TL — {pad(t.tlNumber)}</div>
               <div style={{ fontSize: 22, fontWeight: 400 }}>{t.title}</div>
               <div style={{ color: '#0E6B5A', fontSize: 18 }}>↗</div>

@@ -124,15 +124,31 @@ function FormattedText({ text }: { text: string }) {
 
 const pad = (n: any) => String(n ?? 0).padStart(2, '0')
 
-export default async function Page({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params
-  let thought: any = null
+async function getThought(slug: string) {
   try {
     const payload = await getPayload({ config })
-    thought = await payload.findByID({ collection: 'thoughts', id, depth: 2 })
+    const res = await payload.find({ collection: 'thoughts', where: { slug: { equals: slug } }, limit: 1, depth: 2 })
+    return res.docs[0] ?? null
   } catch (e) {
-    thought = null
+    return null
   }
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const thought: any = await getThought(slug)
+  if (!thought) return {}
+  const description = thought.excerpt || thought.subtitle || undefined
+  return {
+    title: `${thought.title} — Acuv Strategy`,
+    description,
+    openGraph: { title: thought.title, description, type: 'article' },
+  }
+}
+
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const thought: any = await getThought(slug)
   if (!thought) return notFound()
 
   const pdfUrl = thought.pdf && typeof thought.pdf === 'object' ? thought.pdf.url : null
