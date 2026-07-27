@@ -2,9 +2,17 @@ import React from 'react'
 import './globals.css'
 
 export const metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'https://acuvstrategy.com'),
   title: 'Acuv Strategy — The destination for confident growth',
   description:
     'From Beirut to New York to the MENA region, acuv guides privately owned businesses to confident growth through bespoke strategy programs backed by finance with integrity.',
+  openGraph: {
+    siteName: 'Acuv Strategy',
+    title: 'Acuv Strategy — The destination for confident growth',
+    description:
+      'From Beirut to New York to the MENA region, acuv guides privately owned businesses to confident growth through bespoke strategy programs backed by finance with integrity.',
+    type: 'website',
+  },
 }
 
 export const viewport = {
