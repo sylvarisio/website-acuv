@@ -3,12 +3,12 @@
 import React, { useState } from 'react'
 
 const LINKS = [
-  { href: '/', label: '01 HOME', key: 'home' },
-  { href: '/services', label: '02 SERVICES', key: 'services' },
-  { href: '/about', label: '03 ABOUT', key: 'about' },
-  { href: '/engagement-model', label: '04 ENGAGEMENT', key: 'engagement' },
-  { href: '/success-stories', label: '05 STORIES', key: 'stories' },
-  { href: '/thoughts', label: '06 THOUGHTS', key: 'thoughts' },
+  { href: '/', label: 'HOME', key: 'home' },
+  { href: '/services', label: 'SERVICES', key: 'services' },
+  { href: '/about', label: 'ABOUT', key: 'about' },
+  { href: '/engagement-model', label: 'ENGAGEMENT', key: 'engagement' },
+  { href: '/success-stories', label: 'STORIES', key: 'stories' },
+  { href: '/thoughts', label: 'THOUGHTS', key: 'thoughts' },
 ]
 
 // Shared responsive navigation bar. Collapses into a hamburger menu on
@@ -33,18 +33,27 @@ export default function SiteNav({
           <a
             key={l.key}
             href={l.href}
+            className={active === l.key ? 'acv-active' : undefined}
             style={{ color: active === l.key ? '#EAF4F0' : 'rgba(234,244,240,.6)' }}
             onClick={() => setOpen(false)}
           >
             {l.label}
           </a>
         ))}
+        <a
+          href="/contact"
+          className="acv-nav__contact-item"
+          style={{ color: '#9FD9C6' }}
+          onClick={() => setOpen(false)}
+        >
+          CONTACT →
+        </a>
       </div>
       <a
         href="/contact"
         className={`acv-nav__cta${contactFilled ? ' acv-nav__cta--filled' : ''}`}
       >
-        CONTACT ↗
+        CONTACT →
       </a>
       <button
         type="button"

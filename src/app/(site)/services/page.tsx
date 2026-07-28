@@ -1,6 +1,7 @@
 import { DotWave } from '@/components/animations'
 import SiteNav from '@/components/SiteNav'
 import SiteFooter from '@/components/SiteFooter'
+import { Accent, Card, CtaBand, NumCircle, SectionRail } from '@/components/ui'
 
 export const metadata = { title: 'Services — Acuv Strategy' }
 
@@ -10,121 +11,90 @@ export default function Page() {
 <div data-screen-label="Services Hero" style={{ background: '#07332C', color: '#EAF4F0', position: 'relative', overflow: 'hidden' }}>
   <div style={{ position: 'absolute', left: '0', right: '0', bottom: '0', height: '260px', opacity: '.75', WebkitMask: 'linear-gradient(to top,#000 45%,transparent)', mask: 'linear-gradient(to top,#000 45%,transparent)' }}><DotWave gap={24} amp={12} alpha={0.8} /></div>
   <SiteNav active="services" />
-  <div className="acv-pad" style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '88px 56px 180px' }}>
-    <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.22em', color: '#9FD9C6', marginBottom: '24px' }}>02 — SERVICES</div>
+  <div className="acv-pad" style={{ position: 'relative', maxWidth: 'var(--acv-container)', margin: '0 auto', padding: '88px 56px 180px' }}>
+    <div style={{ fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.22em', color: '#9FD9C6', marginBottom: '24px' }}>SERVICES</div>
     <div className="acv-h-lg" style={{ fontWeight: '300', fontSize: '68px', lineHeight: '1.05', letterSpacing: '-.025em', maxWidth: '860px', textWrap: 'pretty' }}>Programs for <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', fontWeight: '400', color: '#9FD9C6' }}>impact</span>, services for <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', fontWeight: '400', color: '#9FD9C6' }}>scale</span></div>
   </div>
 </div>
 
 
-<div className="acv-pad acv-section" data-screen-label="Programs" style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
-  <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.14em', color: 'rgba(18,42,36,.4)' }}>01 /<br />STRATEGY</div>
-  <div style={{ borderTop: '1px solid #122A24', paddingTop: '32px' }}>
+<SectionRail num="I" label="STRATEGY" screenLabel="Programs">
+  <div>
     <div className="acv-duo" style={{ display: 'grid', gridTemplateColumns: '1fr 220px', gap: '64px', alignItems: 'center', marginBottom: '64px' }}>
-      <p style={{ margin: '0', fontSize: '16px', lineHeight: '1.85', color: 'rgba(18,42,36,.7)', maxWidth: '620px' }}>Our services are engineered around one goal: Confident Growth. From tailored strategy to financial integrity, we guide business owners with clarity to achieve growth. Our programs are designed according to business maturity stage. Our execution services are a testament of our commitment to achieving results.</p>
+      <p style={{ margin: '0', fontSize: '16px', lineHeight: '1.85', color: 'rgba(18,42,36,.72)', maxWidth: '620px' }}>Our services are engineered around one goal: Confident Growth. From tailored strategy to financial integrity, we guide business owners with clarity to achieve growth. Our programs are designed according to business maturity stage. Our execution services are a testament of our commitment to achieving results.</p>
       <div style={{ position: 'relative', width: '210px', height: '190px', justifySelf: 'end' }}>
         <div style={{ position: 'absolute', inset: '0', background: '#2FA98C', clipPath: 'polygon(50% 3%, 2% 97%, 50% 66%)', animation: 'acv-tri-l 6s ease-in-out infinite' }}></div>
         <div style={{ position: 'absolute', inset: '0', background: '#17705C', clipPath: 'polygon(50% 3%, 98% 97%, 50% 66%)', animation: 'acv-tri-r 6s ease-in-out infinite' }}></div>
         <div style={{ position: 'absolute', inset: '0', background: '#7FCBB4', clipPath: 'polygon(2% 97%, 98% 97%, 50% 66%)', animation: 'acv-tri-c 6s ease-in-out infinite' }}></div>
       </div>
     </div>
-    <div style={{ fontSize: '36px', fontWeight: '300', letterSpacing: '-.015em', marginBottom: '40px' }}>Strategy programs <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>guiding the journey</span></div>
+    <div style={{ fontSize: '36px', fontWeight: '300', letterSpacing: '-.015em', marginBottom: '48px' }}>Strategy programs <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>guiding the journey</span></div>
 
-    <a href="/services/change-the-game" className="acv-section" style={{ textDecoration: 'none', color: 'inherit', display: 'grid', gridTemplateColumns: '64px 1fr 1fr 30px', gap: '40px', padding: '40px 0', borderTop: '1px solid rgba(18,42,36,.12)', alignItems: 'center' }}>
-      <div style={{ width: '44px', height: '44px', border: '1px solid #0E6B5A', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-sans)', fontSize: '11px', color: '#0E6B5A' }}>A</div>
+    <a href="/services/change-the-game" className="acv-section" style={{ textDecoration: 'none', color: 'inherit', display: 'grid', gridTemplateColumns: '1fr 1fr 30px', gap: '40px', padding: '40px 0', borderTop: '1px solid var(--acv-hairline)', alignItems: 'center' }}>
       <div>
         <div style={{ fontSize: '26px', fontWeight: '400' }}>Change the Game</div>
-        <div style={{ marginTop: '8px', fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.2em', color: '#0E6B5A' }}>GUIDING THE JOURNEY</div>
       </div>
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <p style={{ margin: '0', fontSize: '15px', lineHeight: '1.75', color: 'rgba(18,42,36,.65)' }}>Vision Clarity for multi-generational businesses.</p>
+        <p style={{ margin: '0', fontSize: '16px', lineHeight: '1.8', color: 'rgba(18,42,36,.72)' }}>Vision Clarity for multi-generational businesses.</p>
       </div>
-      <div style={{ color: '#0E6B5A', fontSize: '18px' }}>↗</div>
+      <div style={{ color: '#0E6B5A', fontSize: '18px' }}>→</div>
     </a>
 
-    <a href="/services/business-engineering" className="acv-section" style={{ textDecoration: 'none', color: 'inherit', display: 'grid', gridTemplateColumns: '64px 1fr 1fr 30px', gap: '40px', padding: '40px 0', borderTop: '1px solid rgba(18,42,36,.12)', alignItems: 'center' }}>
-      <div style={{ width: '44px', height: '44px', border: '1px solid #0E6B5A', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-sans)', fontSize: '11px', color: '#0E6B5A' }}>B</div>
+    <a href="/services/business-engineering" className="acv-section" style={{ textDecoration: 'none', color: 'inherit', display: 'grid', gridTemplateColumns: '1fr 1fr 30px', gap: '40px', padding: '40px 0', borderTop: '1px solid var(--acv-hairline)', alignItems: 'center' }}>
       <div>
         <div style={{ fontSize: '26px', fontWeight: '400' }}>Business Engineering</div>
-        <div style={{ marginTop: '8px', fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.2em', color: '#0E6B5A' }}>GUIDING THE JOURNEY</div>
       </div>
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <p style={{ margin: '0', fontSize: '15px', lineHeight: '1.75', color: 'rgba(18,42,36,.65)' }}>Growth Targeting for early-stage ventures.</p>
+        <p style={{ margin: '0', fontSize: '16px', lineHeight: '1.8', color: 'rgba(18,42,36,.72)' }}>Growth Targeting for early-stage ventures.</p>
       </div>
-      <div style={{ color: '#0E6B5A', fontSize: '18px' }}>↗</div>
+      <div style={{ color: '#0E6B5A', fontSize: '18px' }}>→</div>
     </a>
 
-    <a href="/services/launch-with-confidence" className="acv-section" style={{ textDecoration: 'none', color: 'inherit', display: 'grid', gridTemplateColumns: '64px 1fr 1fr 30px', gap: '40px', padding: '40px 0', borderTop: '1px solid rgba(18,42,36,.12)', borderBottom: '1px solid rgba(18,42,36,.12)', alignItems: 'center' }}>
-      <div style={{ width: '44px', height: '44px', border: '1px solid #0E6B5A', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--font-sans)', fontSize: '11px', color: '#0E6B5A' }}>C</div>
+    <a href="/services/launch-with-confidence" className="acv-section" style={{ textDecoration: 'none', color: 'inherit', display: 'grid', gridTemplateColumns: '1fr 1fr 30px', gap: '40px', padding: '40px 0', borderTop: '1px solid var(--acv-hairline)', borderBottom: '1px solid var(--acv-hairline)', alignItems: 'center' }}>
       <div>
         <div style={{ fontSize: '26px', fontWeight: '400' }}>Launch with Confidence</div>
-        <div style={{ marginTop: '8px', fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.2em', color: '#0E6B5A' }}>GUIDING THE JOURNEY</div>
       </div>
       <div style={{ display: 'flex', alignItems: 'center' }}>
-        <p style={{ margin: '0', fontSize: '15px', lineHeight: '1.75', color: 'rgba(18,42,36,.65)' }}>GTM Success for new markets &amp; products.</p>
+        <p style={{ margin: '0', fontSize: '16px', lineHeight: '1.8', color: 'rgba(18,42,36,.72)' }}>GTM Success for new markets &amp; products.</p>
       </div>
-      <div style={{ color: '#0E6B5A', fontSize: '18px' }}>↗</div>
+      <div style={{ color: '#0E6B5A', fontSize: '18px' }}>→</div>
     </a>
   </div>
-</div>
+</SectionRail>
 
 
-<div className="acv-pad acv-section" data-screen-label="Finance" style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 0', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
-  <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.14em', color: 'rgba(18,42,36,.4)' }}>02 /<br />FINANCE</div>
-  <div style={{ borderTop: '1px solid #122A24', paddingTop: '32px' }}>
+<SectionRail num="II" label="FINANCE" screenLabel="Finance">
+  <div>
     <div style={{ fontSize: '36px', fontWeight: '300', letterSpacing: '-.015em', marginBottom: '16px' }}>Corporate finance <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>services</span></div>
-    <p style={{ margin: '0 0 48px', fontSize: '14px', lineHeight: '1.75', color: 'rgba(18,42,36,.6)', maxWidth: '560px' }}>Our execution services are a testament of our commitment to achieving results.</p>
-    <div className="acv-cols-3" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '24px' }}>
-      <a href="/services/financial-engineering" style={{ textDecoration: 'none', color: 'inherit', background: '#fff', border: '1px solid rgba(18,42,36,.1)', padding: '36px 32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-        <div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.2em', color: '#0E6B5A' }}>01</div>
-        <div style={{ fontSize: '20px' }}>Financial Engineering</div>
-        <div style={{ fontSize: '13.5px', lineHeight: '1.7', color: 'rgba(18,42,36,.6)' }}>Visibility for decision-making.</div>
-        <div style={{ marginTop: 'auto', fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.14em', color: '#0E6B5A' }}>LEARN MORE ↗</div>
-      </a>
-      <a href="/services/mergers-acquisition" style={{ textDecoration: 'none', color: 'inherit', background: '#fff', border: '1px solid rgba(18,42,36,.1)', padding: '36px 32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-        <div style={{ fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.2em', color: '#0E6B5A' }}>02</div>
-        <div style={{ fontSize: '20px' }}>Mergers &amp; Acquisitions</div>
-        <div style={{ fontSize: '13.5px', lineHeight: '1.7', color: 'rgba(18,42,36,.6)' }}>Credibility in every deal.</div>
-        <div style={{ marginTop: 'auto', fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.14em', color: '#0E6B5A' }}>LEARN MORE ↗</div>
-      </a>
-      <a href="/services/investment-capital-funding" style={{ textDecoration: 'none', background: '#0A4A3F', color: '#EAF4F0', padding: '36px 32px', display: 'flex', flexDirection: 'column', gap: '12px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'absolute', inset: '0', backgroundImage: 'radial-gradient(rgba(159,217,198,.16) 1px,transparent 1px)', backgroundSize: '14px 14px', animation: 'acv-drift 30s linear infinite' }}></div>
-        <div style={{ position: 'relative', fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.2em', color: '#9FD9C6' }}>03</div>
-        <div style={{ position: 'relative', fontSize: '20px' }}>Investment &amp; Capital Funding</div>
-        <div style={{ position: 'relative', fontSize: '13.5px', lineHeight: '1.7', color: 'rgba(234,244,240,.65)' }}>Clarity for growth.</div>
-        <div style={{ position: 'relative', marginTop: 'auto', fontFamily: 'var(--font-sans)', fontSize: '10px', letterSpacing: '.14em', color: '#9FD9C6' }}>LEARN MORE ↗</div>
-      </a>
+    <p style={{ margin: '0 0 48px', fontSize: '16px', lineHeight: '1.8', color: 'rgba(18,42,36,.72)', maxWidth: '560px' }}>Our execution services are a testament of our commitment to achieving results.</p>
+    <div className="acv-cols-3" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridAutoRows: 'minmax(260px, auto)', gap: 'var(--acv-gap)', alignItems: 'stretch' }}>
+      <Card href="/services/financial-engineering" marker={1} title="Financial Engineering" body="Visibility for decision-making." />
+      <Card href="/services/mergers-acquisition" marker={2} title={<>Mergers &amp; Acquisitions</>} body="Credibility in every deal." />
+      <Card href="/services/investment-capital-funding" marker={3} dark title={<>Investment &amp; Capital Funding</>} body="Clarity for growth." />
     </div>
   </div>
-</div>
+</SectionRail>
 
 
-<div className="acv-pad acv-section" data-screen-label="Engagement teaser" style={{ maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 96px', display: 'grid', gridTemplateColumns: '120px 1fr', gap: '40px' }}>
-  <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.14em', color: 'rgba(18,42,36,.4)' }}>03 /<br />MODEL</div>
-  <div className="acv-duo" style={{ borderTop: '1px solid #122A24', paddingTop: '32px', display: 'grid', gridTemplateColumns: '1fr 260px', gap: '56px', alignItems: 'center' }}>
+<SectionRail num="III" label="MODEL" screenLabel="Engagement teaser" last>
+  <div className="acv-duo" style={{ display: 'grid', gridTemplateColumns: '1fr 260px', gap: '56px', alignItems: 'center' }}>
     <div>
-      <div style={{ fontSize: '32px', fontWeight: '300', letterSpacing: '-.015em' }}>How we engage: <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>insight to impact</span>, with ownership at every step.</div>
-      <p style={{ margin: '16px 0 0', fontSize: '14px', lineHeight: '1.75', color: 'rgba(18,42,36,.6)', maxWidth: '560px' }}>Every program follows the same disciplined arc — see the model that carried 87 engagements across 18 countries.</p>
+      <div style={{ fontSize: '36px', fontWeight: '300', letterSpacing: '-.015em' }}>How we engage: <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>insight to impact</span>, with ownership at every step.</div>
+      <p style={{ margin: '16px 0 0', fontSize: '16px', lineHeight: '1.8', color: 'rgba(18,42,36,.72)', maxWidth: '560px' }}>Every program follows the same disciplined arc — see the model that carried 87 engagements across 18 countries.</p>
     </div>
-    <a href="/engagement-model" style={{ justifySelf: 'end', fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.12em', color: '#F6F5F1', background: '#0A4A3F', padding: '14px 26px', borderRadius: '999px' }}>ENGAGEMENT MODEL →</a>
+    <a className="acv-pill" href="/engagement-model" style={{ justifySelf: 'end', fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.12em', color: '#F6F5F1', background: '#0A4A3F', padding: '15px 28px', borderRadius: '16px' }}>ENGAGEMENT MODEL →</a>
   </div>
-</div>
+</SectionRail>
 
 
-<div data-screen-label="CTA" style={{ background: '#07332C', color: '#EAF4F0', position: 'relative', overflow: 'hidden' }}>
-  <div style={{ position: 'absolute', right: '-200px', bottom: '-260px', width: '620px', height: '620px', border: '1px solid rgba(159,217,198,.18)', borderRadius: '50%' }}></div>
-  <div style={{ position: 'absolute', right: '-140px', bottom: '-200px', width: '470px', height: '470px', border: '1px solid rgba(159,217,198,.14)', borderRadius: '50%' }}></div>
-  <div className="acv-pad" style={{ position: 'relative', maxWidth: '1200px', margin: '0 auto', padding: '96px 56px 96px' }}>
-    <div className="acv-cta" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: '64px', borderTop: '1px solid rgba(159,217,198,.25)', paddingTop: '48px' }}>
-      <div className="acv-h-md" style={{ fontWeight: '300', fontSize: '60px', lineHeight: '1.08', letterSpacing: '-.025em' }}>Not sure which<br />program <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', fontWeight: '400', color: '#9FD9C6' }}>fits</span>?</div>
-      <div className="acv-cta-side" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '24px' }}>
-        <p style={{ margin: '0', fontSize: '14px', color: 'rgba(234,244,240,.6)', maxWidth: '280px', textAlign: 'right' }}>A 30-minute conversation will tell us both.</p>
-        <a href="/contact" style={{ fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.14em', color: '#07332C', background: '#9FD9C6', padding: '16px 32px', borderRadius: '999px' }}>CONTACT US ↗</a>
-      </div>
-    </div>
-    <SiteFooter />
-  </div>
-</div>
+<CtaBand
+  headline={<>Not sure which<br />program <Accent>fits</Accent>?</>}
+  blurb="A 30-minute conversation will tell us both."
+  buttons={[
+    { href: '/engagement-model', label: 'ENGAGEMENT MODEL', variant: 'outline' },
+    { href: '/contact', label: 'CONTACT US →' },
+  ]}
+/>
     </>
   )
 }
