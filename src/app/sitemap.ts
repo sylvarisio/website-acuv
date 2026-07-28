@@ -8,7 +8,7 @@ const BASE = process.env.NEXT_PUBLIC_SERVER_URL || 'https://acuvstrategy.com'
 export const dynamic = 'force-dynamic'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const staticRoutes = ['', '/services', '/about', '/engagement-model', '/success-stories', '/thoughts', '/contact'].map(
+  const staticRoutes = ['', '/services', '/about', '/engagement-model', '/success-stories', '/thoughts', '/contact', '/privacy', '/terms'].map(
     (route) => ({
       url: `${BASE}${route}`,
       changeFrequency: 'monthly' as const,

@@ -55,7 +55,13 @@ export default function SiteFooter({ standalone }: { standalone?: boolean }) {
           </div>
         </div>
       </div>
-      <div style={{ marginTop: '48px', fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.14em', color: 'rgba(234,244,240,.55)' }}>© 2026 ACUV STRATEGY. ALL RIGHTS RESERVED.</div>
+      <div style={{ marginTop: '48px', display: 'flex', flexWrap: 'wrap', gap: '8px 28px', alignItems: 'baseline', fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.14em', color: 'rgba(234,244,240,.55)' }}>
+        <span>© 2026 ACUV STRATEGY. ALL RIGHTS RESERVED.</span>
+        <span style={{ display: 'flex', gap: '20px', marginLeft: 'auto' }}>
+          <a href="/privacy" style={{ color: 'rgba(234,244,240,.55)' }}>PRIVACY POLICY</a>
+          <a href="/terms" style={{ color: 'rgba(234,244,240,.55)' }}>TERMS OF USE</a>
+        </span>
+      </div>
     </>
   )
 }
