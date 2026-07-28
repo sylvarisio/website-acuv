@@ -81,7 +81,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <>
-<div data-screen-label="Article Hero" style={{ background: '#07332C', color: '#EAF4F0', position: 'relative', overflow: 'hidden' }}>
+<div data-screen-label="Article Hero" className="acv-hero" style={{ background: '#07332C', color: '#EAF4F0', position: 'relative', overflow: 'hidden' }}>
   <div style={{ position: 'absolute', left: '0', right: '0', bottom: '0', height: '260px', opacity: '.6', WebkitMask: 'linear-gradient(to top,#000 45%,transparent)', mask: 'linear-gradient(to top,#000 45%,transparent)' }}><DotWave gap={24} amp={12} alpha={0.7} /></div>
   <SiteNav active="thoughts" />
   <div className="acv-pad" style={{ position: 'relative', maxWidth: 'var(--acv-container)', margin: '0 auto', padding: '64px 56px 140px' }}>
