@@ -291,10 +291,10 @@ textarea::placeholder {
 .acv-journey-v__step:last-child { padding-bottom: 0; }
 .acv-journey-v__step:last-child::before { display: none; }
 
-/* ---- Hero band (all pages except home): one standard height ---- */
+/* ---- Hero band (all pages except home): one standard height ----
+   Block layout on purpose: flex would stop the auto-margin containers
+   from stretching to the 1320px token width. */
 .acv-hero {
-  display: flex;
-  flex-direction: column;
   min-height: 680px;
 }
 @media (max-width: 900px) {
