@@ -70,6 +70,7 @@ export interface Config {
     users: User;
     media: Media;
     thoughts: Thought;
+    stories: Story;
     documents: Document;
     submissions: Submission;
     announcements: Announcement;
@@ -83,6 +84,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     thoughts: ThoughtsSelect<false> | ThoughtsSelect<true>;
+    stories: StoriesSelect<false> | StoriesSelect<true>;
     documents: DocumentsSelect<false> | DocumentsSelect<true>;
     submissions: SubmissionsSelect<false> | SubmissionsSelect<true>;
     announcements: AnnouncementsSelect<false> | AnnouncementsSelect<true>;
@@ -207,6 +209,54 @@ export interface Thought {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "stories".
+ */
+export interface Story {
+  id: number;
+  title: string;
+  /**
+   * Anchor id on /success-stories, e.g. "turning-friction-into-clarity" → /success-stories#turning-friction-into-clarity
+   */
+  slug: string;
+  /**
+   * Display order (1 = first)
+   */
+  order: number;
+  client: string;
+  industry?: string | null;
+  theme?: string | null;
+  /**
+   * One-line teaser shown on the homepage story cards
+   */
+  excerpt?: string | null;
+  milestones?:
+    | {
+        label: string;
+        id?: string | null;
+      }[]
+    | null;
+  body?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  quote?: string | null;
+  closing?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "documents".
  */
 export interface Document {
@@ -285,6 +335,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'thoughts';
         value: number | Thought;
+      } | null)
+    | ({
+        relationTo: 'stories';
+        value: number | Story;
       } | null)
     | ({
         relationTo: 'documents';
@@ -395,6 +449,30 @@ export interface ThoughtsSelect<T extends boolean = true> {
   body?: T;
   pdf?: T;
   publishedDate?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "stories_select".
+ */
+export interface StoriesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  order?: T;
+  client?: T;
+  industry?: T;
+  theme?: T;
+  excerpt?: T;
+  milestones?:
+    | T
+    | {
+        label?: T;
+        id?: T;
+      };
+  body?: T;
+  quote?: T;
+  closing?: T;
   updatedAt?: T;
   createdAt?: T;
 }

@@ -29,6 +29,12 @@ export async function POST(req: Request) {
   const topic = String(body?.topic || '').trim()
   const message = String(body?.message || '').trim()
 
+  // Honeypot: the visible form never fills `company`; bots that do get a
+  // fake success so they don't retry.
+  if (String(body?.company || '').trim()) {
+    return NextResponse.json({ ok: true, emailed: false })
+  }
+
   // Validation
   if (!name || !email || !topic || !message) {
     return NextResponse.json({ error: 'Please fill in all fields.' }, { status: 400 })
@@ -61,7 +67,10 @@ export async function POST(req: Request) {
   const to = process.env.CONTACT_TO || user
 
   if (!host || !user || !pass || !to) {
-    console.error('SMTP is not configured; skipping email send.')
+    console.error(
+      'CONTACT FORM: SMTP is NOT configured — enquiry was stored in the CMS but NO email was sent. ' +
+        'Set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS and CONTACT_TO (see .env.example / README).',
+    )
     // Submission was stored (if that worked); tell the client it succeeded.
     return NextResponse.json({ ok: true, emailed: false })
   }

@@ -4,7 +4,6 @@
 export type Service = {
   slug: string
   group: 'strategy' | 'finance'
-  marker: string
   title: string
   tagline: string
   audience: string
@@ -18,7 +17,6 @@ export const services: Service[] = [
   {
     slug: 'change-the-game',
     group: 'strategy',
-    marker: 'A',
     title: 'Change the Game',
     tagline: 'Vision Clarity for Multi-Generational Businesses',
     audience: 'For family businesses navigating legacy, leadership friction, and market evolution.',
@@ -43,7 +41,6 @@ export const services: Service[] = [
   {
     slug: 'business-engineering',
     group: 'strategy',
-    marker: 'B',
     title: 'Business Engineering',
     tagline: 'Growth Targeting for Early-Stage Ventures',
     audience: 'For founders with momentum but no internal support.',
@@ -67,7 +64,6 @@ export const services: Service[] = [
   {
     slug: 'launch-with-confidence',
     group: 'strategy',
-    marker: 'C',
     title: 'Launch with Confidence',
     tagline: 'GTM Success for New Ventures',
     audience: 'For businesses entering new markets, launching products, or expanding reach.',
@@ -91,7 +87,6 @@ export const services: Service[] = [
   {
     slug: 'financial-engineering',
     group: 'finance',
-    marker: '01',
     title: 'Financial Engineering',
     tagline: 'Visibility for Decision-Making',
     audience: 'For businesses seeking financial clarity and operational insight.',
@@ -115,7 +110,6 @@ export const services: Service[] = [
   {
     slug: 'mergers-acquisition',
     group: 'finance',
-    marker: '02',
     title: 'Mergers & Acquisition',
     tagline: 'Credibility in Every Deal',
     audience: 'For businesses navigating growth through acquisition or strategic partnerships.',
@@ -139,7 +133,6 @@ export const services: Service[] = [
   {
     slug: 'investment-capital-funding',
     group: 'finance',
-    marker: '03',
     title: 'Investment & Capital Funding',
     tagline: 'Clarity for Growth',
     audience: 'For businesses seeking capital to scale, expand, or transform.',

@@ -11,6 +11,7 @@ export type ThoughtSeed = {
   excerpt: string
   publishedDate: string
   pdfFile?: string // filename inside seed-assets/
+  coverFile?: string // filename inside seed-assets/covers/
   body?: Block[]
 }
 
@@ -27,7 +28,7 @@ export const thoughts: ThoughtSeed[] = [
       { h2: 'The Calm Is Over' },
       { p: 'In an era defined by unpredictability, trade is no longer a neutral force—it’s a battleground. With the U.S. imposing sweeping tariffs—some exceeding 50%—on core sectors from manufacturing to clean energy, global businesses are being thrust into unfamiliar terrain.' },
       { p: 'Margins are shrinking. Supply chains are splintering. And yet, decision-makers are expected to move fast, stay bold, and deliver returns in markets that now feel politically charged and economically volatile.' },
-      { p: 'But in the eye of this storm, clarity is a strategy—and confidence is the most valuable currency.' },
+      { h2: 'But in the eye of this storm, clarity is a strategy—and confidence is the most valuable currency.' },
       { h2: 'The Trade Shake-Up: Why This Isn’t Just Policy' },
       { p: 'What makes this tariff wave different isn’t just the numbers—it’s the ripple effect:' },
       { ul: [
@@ -38,25 +39,27 @@ export const thoughts: ThoughtSeed[] = [
       { p: 'Tariffs have become more than line items on customs forms—they are strategic inflection points. And the danger isn’t just in reacting too slowly. It’s in underestimating how far they reach into valuation, credibility, and competitive advantage.' },
       { h2: 'The Strategic Toll of Inaction' },
       { p: 'Let’s break down the hidden costs of navigating this new terrain without clarity:' },
-      { ul: [
-        'Margin erosion: Unoptimized sourcing strategies can eat up 18–25% of gross margin depending on sector exposure.',
-        'Valuation volatility: Companies facing undiagnosed trade risk often lose investor confidence due to perceived instability.',
-        'Opportunity blindness: Overfocused on tariff avoidance, many miss adjacent market opportunities that could be unlocked through strategic repositioning.',
-      ] },
+      { p: '🔻 Margin erosion: Unoptimized sourcing strategies can eat up 18–25% of gross margin depending on sector exposure.' },
+      { p: '🔻 Valuation volatility: Companies facing undiagnosed trade risk often lose investor confidence due to perceived instability.' },
+      { p: '🔻 Opportunity blindness: Overfocused on tariff avoidance, many miss adjacent market opportunities that could be unlocked through strategic repositioning.' },
       { p: 'The result? Even well-run businesses are finding themselves outpaced by smaller, more agile players who treat tariffs not as roadblocks—but as signposts.' },
       { h2: 'Path Forward: Strategies for Confident Growth' },
       { p: 'Here’s how forward-thinking businesses are responding—and how ACUV turns those responses into repeatable outcomes:' },
-      { ul: [
-        'Conduct a Tariff Exposure Audit → Understand where risk lies across SKUs, partners, and distribution. ACUV helps clients quantify trade sensitivity and build tiered response plans using market data, financial modeling, and sourcing alternatives.',
-        'Reengineer Supply Chains with Precision → Shift from reactive friend-shoring to intentional repositioning. Our teams guide businesses through supplier strategy, risk-adjusted costing, and scenario planning—often tied to execution through our CXO Mandate.',
-        'Align Financial Strategy with Market Reality → Build capital narratives that reflect post-tariff value. ACUV’s finance division helps clean financial history, adjust revenue assumptions, and craft investor decks that withstand scrutiny and project confidence.',
-      ] },
+      { h2: '1. Conduct a Tariff Exposure Audit' },
+      { p: '→ Understand where risk lies across SKUs, partners, and distribution.' },
+      { p: 'ACUV helps clients quantify trade sensitivity and build tiered response plans using market data, financial modeling, and sourcing alternatives.' },
+      { h2: '2. Reengineer Supply Chains with Precision' },
+      { p: '→ Shift from reactive friend-shoring to intentional repositioning.' },
+      { p: 'Our teams guide businesses through supplier strategy, risk-adjusted costing, and scenario planning—often tied to execution through our CXO Mandate.' },
+      { h2: '3. Align Financial Strategy with Market Reality' },
+      { p: '→ Build capital narratives that reflect post-tariff value.' },
+      { p: 'ACUV’s finance division helps clean financial history, adjust revenue assumptions, and craft investor decks that withstand scrutiny and project confidence.' },
       { h2: 'Clarity When It Matters Most' },
       { p: 'Whether you’re launching in emerging markets, recalibrating a multi-country footprint, or navigating investor due diligence amid global volatility—ACUV walks the path with you. Our strategy programs and finance services are designed to meet businesses where complexity begins, and lead them where confident growth becomes real.' },
       { h2: 'The Time to Move Is Now' },
       { p: 'Trade disruption isn’t temporary—it’s becoming the new baseline. But the businesses that win won’t be those that brace—they’ll be those that build.' },
-      { p: 'Tariffs can compress profit. They can’t shrink ambition. Not when clarity leads the way.' },
-      { p: 'Let ACUV help you turn risk into readiness—and strategy into scale.' },
+      { quote: 'Tariffs can compress profit. They can’t shrink ambition. Not when clarity leads the way.' },
+      { h2: 'Let ACUV help you turn risk into readiness—and strategy into scale.' },
     ],
   },
   {
@@ -73,13 +76,16 @@ export const thoughts: ThoughtSeed[] = [
       { p: 'From additive manufacturing to AI-powered robotics, the sector is undergoing a renaissance. But innovation isn’t just about technology—it’s about mindset. And the manufacturers who embrace change early will shape the next industrial era.' },
       { h2: 'The Forces Reshaping Manufacturing' },
       { p: 'Let’s unpack the five seismic shifts redefining the factory floor:' },
-      { ul: [
-        'Additive Manufacturing (3D Printing) — No longer niche, 3D printing enables rapid prototyping, lightweight components, and localized production. Aerospace and automotive leaders reduce tooling costs and accelerate design cycles; medical device makers customize prosthetics and implants with unprecedented precision.',
-        'AI-Augmented Robotics & Automation — Robots are evolving from task executors to intelligent collaborators. Vision-enabled cobots adapt to high-mix environments; AI-driven welding and assembly systems reduce downtime and improve quality.',
-        'Sustainable Materials & Circular Design — Eco-conscious manufacturing is a competitive edge. Bio-based polymers and recycled metals replace legacy inputs; circular design drives product longevity and resource efficiency.',
-        'Digital Twins & Predictive Systems — Virtual replicas of production lines simulate outcomes before they happen. Test, tweak, and optimize without disruption; predictive maintenance reduces unplanned downtime and extends asset life.',
-        'Hybrid Energy & Smart Infrastructure — Energy volatility is pushing a rethink of power. Propane-powered compressors and solar-integrated systems gain traction; smart lighting and climate control reduce operational costs and carbon footprint.',
-      ] },
+      { h2: '1. Additive Manufacturing (3D Printing)' },
+      { p: 'No longer niche, 3D printing is enabling rapid prototyping, lightweight components, and localized production. → Aerospace and automotive leaders are using it to reduce tooling costs and accelerate design cycles. → Medical device makers are customizing prosthetics and implants with unprecedented precision.' },
+      { h2: '2. AI-Augmented Robotics & Automation' },
+      { p: 'Robots are evolving from task executors to intelligent collaborators. → Vision-enabled cobots adapt to high-mix environments. → AI-driven welding and assembly systems reduce downtime and improve quality.' },
+      { h2: '3. Sustainable Materials & Circular Design' },
+      { p: 'Eco-conscious manufacturing is now a competitive edge. → Bio-based polymers and recycled metals are replacing legacy inputs. → Circular design principles are driving product longevity and resource efficiency.' },
+      { h2: '4. Digital Twins & Predictive Systems' },
+      { p: 'Virtual replicas of production lines simulate outcomes before they happen. → Manufacturers can test, tweak, and optimize without disrupting operations. → Predictive maintenance reduces unplanned downtime and extends asset life.' },
+      { h2: '5. Hybrid Energy & Smart Infrastructure' },
+      { p: 'Energy volatility is pushing manufacturers to rethink power. → Propane-powered compressors and solar-integrated systems are gaining traction. → Smart lighting and climate control reduce operational costs and carbon footprint.' },
       { h2: 'Lead the Change, Don’t Chase It' },
       { p: 'Forward-thinking manufacturers aren’t just adopting tech—they’re reengineering their business models:' },
       { ul: [
@@ -96,11 +102,11 @@ export const thoughts: ThoughtSeed[] = [
         'Design go-to-market strategies for new products and capabilities',
         'Build organizational clarity to support scale and agility',
       ] },
-      { p: 'Whether you’re a legacy manufacturer seeking reinvention or a tech-driven startup chasing scale—ACUV delivers the clarity, structure, and confidence to lead.' },
+      { p: 'Whether you\'re a legacy manufacturer seeking reinvention or a tech-driven startup chasing scale—ACUV delivers the clarity, structure, and confidence to lead.' },
       { h2: 'The Future Is Already Here' },
       { quote: 'Manufacturing isn’t just evolving—it’s being reimagined.' },
       { p: 'The next industrial revolution won’t be led by machines alone. It will be led by leaders who know how to activate them. ACUV helps manufacturers become those leaders—through strategy, execution, and finance that moves with purpose.' },
-      { p: 'Let’s build the systems of tomorrow, today.' },
+      { h2: 'Let’s build the systems of tomorrow, today.' },
     ],
   },
   {
@@ -117,13 +123,16 @@ export const thoughts: ThoughtSeed[] = [
       { p: 'From Haier’s microenterprise model to Buurtzorg’s self-managed teams, the world’s most innovative companies aren’t just changing what they produce—they’re reinventing how they operate. And the question facing every business today is simple: Are you structured to move—or stuck in place?' },
       { h2: 'The Forces Driving Structural Innovation' },
       { p: 'Let’s unpack the trends reshaping organizational design and decision-making:' },
-      { ul: [
-        'Decentralized Decision-Making — Companies like Mastercard and Bayer are flattening hierarchies to empower frontline teams. Decision rights are being distributed, not concentrated—speed becomes a strategic KPI.',
-        'Microenterprise & Pod-Based Models — Haier’s “Rendanheyi” model breaks the company into autonomous units with P&L ownership. Agile pods and team topologies allow rapid response to market shifts.',
-        'AI-Augmented Decision Frameworks — AI tools now support scenario modeling, risk analysis, and predictive insights. Leaders are shifting from intuition-led to data-backed decisions—without losing human judgment.',
-        'Skill-Based Structures — Roles are being defined by capability, not title. T-shaped talent profiles allow cross-functional agility and deeper collaboration.',
-        'Hybrid Work & Digital Ecosystems — Remote teams require new governance models, asynchronous workflows, and trust-based leadership. Organizational design now includes digital infrastructure as a core layer.',
-      ] },
+      { h2: '1. Decentralized Decision-Making' },
+      { p: '→ Companies like Mastercard and Bayer are flattening hierarchies to empower frontline teams. → Decision rights are being distributed, not concentrated—speed becomes a strategic KPI.' },
+      { h2: '2. Microenterprise & Pod-Based Models' },
+      { p: '→ Haier’s “Rendanheyi” model breaks the company into autonomous units with P&L ownership. → Agile pods and team topologies allow rapid response to market shifts.' },
+      { h2: '3. AI-Augmented Decision Frameworks' },
+      { p: '→ AI tools now support scenario modeling, risk analysis, and predictive insights. → Leaders are shifting from intuition-led to data-backed decisions—without losing human judgment.' },
+      { h2: '4. Skill-Based Structures' },
+      { p: '→ Roles are being defined by capability, not title. → T-shaped talent profiles allow cross-functional agility and deeper collaboration.' },
+      { h2: '5. Hybrid Work & Digital Ecosystems' },
+      { p: '→ Remote teams require new governance models, asynchronous workflows, and trust-based leadership. → Organizational design now includes digital infrastructure as a core layer.' },
       { h2: 'The Risk of Standing Still' },
       { p: 'Organizations that cling to legacy structures face:' },
       { ul: [
@@ -140,11 +149,11 @@ export const thoughts: ThoughtSeed[] = [
         'Align structure with strategy—so every role, team, and process drives measurable impact',
         'Embed execution leadership to activate change, not just plan it',
       ] },
-      { p: 'Whether you’re scaling, restructuring, or launching into new markets—ACUV builds the architecture that moves with you.' },
+      { p: 'Whether you\'re scaling, restructuring, or launching into new markets—ACUV builds the architecture that moves with you.' },
       { h2: 'Structure Is Strategy' },
       { quote: 'The future belongs to organizations that think fast and move faster.' },
       { p: 'Organizational design isn’t a back-office exercise—it’s the blueprint for growth. ACUV helps leaders build structures that don’t just support decisions—they accelerate them.' },
-      { p: 'Let’s architect your next chapter—with clarity, confidence, and impact.' },
+      { h2: 'Let’s architect your next chapter—with clarity, confidence, and impact.' },
     ],
   },
   {
@@ -155,6 +164,7 @@ export const thoughts: ThoughtSeed[] = [
       'The global economy no longer moves in predictable cycles—it pulses through disruption. A disciplined framework to decode volatility, anticipate directional drift, and anchor strategy in clarity.',
     publishedDate: '2025-11-01',
     pdfFile: 'getting-ahead-of-the-next-stage-of-economic-disruption.pdf',
+    coverFile: 'covers/getting-ahead-of-the-next-stage-of-economic-disruption.png',
     body: [
       { p: 'The global economy no longer moves in predictable cycles—it pulses through disruption. What began as a health crisis, followed by a fiscal flood, has hardened into a geopolitical recalibration. The result is not episodic volatility, but structural turbulence that is reshaping currencies, commodities, and capital flows.' },
       { p: 'In our latest publication, Getting Ahead of the Next Stage of Economic Disruption, we provide senior executives and global decision makers with a disciplined framework to decode volatility, anticipate directional drift, and anchor strategy in clarity.' },
@@ -189,29 +199,20 @@ export const thoughts: ThoughtSeed[] = [
       'MENA’s majority economies now sit at the bull’s eye of global uncertainty. Oil suppression, corridor fragility, and rival standards are converging into pressures that extend far beyond sovereign balance sheets.',
     publishedDate: '2025-11-11',
     pdfFile: 'getting-ahead-of-the-mena-liquidity-squeeze.pdf',
+    coverFile: 'covers/getting-ahead-of-the-mena-liquidity-squeeze.png',
     body: [
-      { p: 'MENA’s majority economies—Saudi Arabia, UAE, Egypt, Iran, Algeria, and Israel—now sit at the bull’s eye of global volatility. Together they account for nearly 77% of regional GDP, making the region both the recipient and transmitter of global shocks.' },
-      { p: 'Oil suppression, corridor fragility, and rival standards are converging into pressures that reach far beyond sovereign balance sheets. These forces directly shape inflation, credit, consumer demand, talent mobility, and family office portfolios. Boards must therefore act with dual discipline: protecting macro resilience while defending the lived economy of households and SMEs.' },
-      { h2: 'Key Insights' },
+      { p: 'In today’s volatile business environment, MENA’s majority economies now sit at the bull’s eye of global uncertainty. Oil suppression, corridor fragility, and rival standards are converging into pressures that extend far beyond sovereign balance sheets — directly into inflation, credit, consumer demand, talent, and family office portfolios.' },
+      { p: 'Our latest publication, Getting Ahead of the MENA Liquidity Squeeze, frames the facts, pressures, and scenarios (S1–S3) and translates them into boardroom discipline.' },
+      { p: 'Key insights include:' },
       { ul: [
-        'Facts & Figures: GDP concentration in the 5+1 economies amplifies systemic exposure.',
-        'Horizon & Pressures: U.S.–China rivalry, oil suppression, corridor costs, and capital flight squeeze liquidity.',
-        'Scenarios & Impact: From highest tension to highest liquidity shortage, outcomes include inflation spikes eroding household purchasing power, tightening credit lines, and rising talent flight draining mid-tier economies.',
-        'Strategy: Boards must act decisively on inflation, credit, purchasing power, talent, and family office exposures.',
+        'GDP concentration in the 5+1 economies amplifies systemic exposure.',
+        'Liquidity lifelines are fragile — remittances, tourism, corridors, and FDI are under strain.',
+        'Scenarios range from Flight to Safety to Silent Stress, with outcomes spanning inflation spikes, credit tightening, and talent flight.',
+        'Boards must act with dual discipline: macro resilience and micro defense.',
       ] },
-      { h2: 'Boardroom Recommendations' },
-      { p: 'Our framework distills six pillars of action:' },
-      { ul: [
-        'Inflation & Margins: Dynamic pricing, input hedging, and digitization to protect profitability.',
-        'Liquidity & Credit: Diversify financing channels and mandate stress tests.',
-        'Purchasing Power: Stabilize essential goods, adjust wages, and strengthen loyalty ecosystems.',
-        'Talent Mobility: Launch GCC/MENA rotation programs and long-term incentives.',
-        'Family Offices: Rebalance portfolios, reduce foreign exposure, and allocate toward regional infrastructure/SMEs.',
-        'Scenario Playbooks: Set triggers for S1–S3 and pre-approve boardroom actions.',
-      ] },
-      { h2: 'Why It Matters' },
-      { p: 'MENA is not merely exposed to global shocks—it transmits volatility back into energy prices, trade costs, and investor sentiment worldwide. Boards and family offices must anticipate disruption before it materializes, preparing strategies that reinforce both sovereign buffers and household trust.' },
-      { p: 'This publication provides leaders with the clarity, resonance, and actionable insight needed to navigate a fragmented global order.' },
+      { h2: 'Recommendations for Leaders' },
+      { p: 'We provide condensed recommendations across six pillars — Inflation, Liquidity, Purchasing Power, Talent, Family Offices, and Scenario Playbooks — designed for immediate boardroom application.' },
+      { p: 'This note is intended to help leaders anticipate disruption before it materializes, and to prepare actionable strategies that protect both sovereign resilience and household trust.' },
     ],
   },
   {
@@ -223,6 +224,7 @@ export const thoughts: ThoughtSeed[] = [
       'A strategic lens on the GCC+Egypt venture ecosystem: structural asymmetries that shape risk, resilience, and opportunity across inbound venture capital and outbound sovereign investment.',
     publishedDate: '2025-11-15',
     pdfFile: 'vc-flows-and-innovation-rails.pdf',
+    coverFile: 'covers/vc-flows-and-innovation-rails.png',
     body: [
       { p: 'Beyond Applications – VC Flows, PE Bets, and the GCC Innovation Rails offers a strategic lens on the GCC+Egypt venture ecosystem. The publication does not critique or spotlight flaws; instead, it illuminates structural asymmetries that shape risk, resilience, and opportunity.' },
       { p: 'Inbound venture capital has surged across the region, with Saudi Arabia, the UAE, and Egypt leading deal activity. FinTech, SaaS, and Ecommerce dominate funding flows, reflecting entrepreneurial appetite for application-layer ventures that scale quickly and align with procurement demand. Yet beneath this vibrancy lies dependency: startups consume infrastructure—cloud, compute, payments, logistics—rather than build it. They remain price takers on standards, FX, and vendor policies set abroad.' },
@@ -258,6 +260,7 @@ export const thoughts: ThoughtSeed[] = [
       'The world enters 2026 in contested sovereignty. Energy flows are politicized, alliances are brittle, and technology supply chains are exposed. A comprehensive compass for institutions, family enterprises, investors, and individuals.',
     publishedDate: '2026-01-10',
     pdfFile: 'outlook-report-2026-sovereignty-at-stake.pdf',
+    coverFile: 'covers/outlook-report-2026-sovereignty-at-stake.png',
     body: [
       { p: 'The world enters 2026 in contested sovereignty. Energy flows are politicized, alliances are brittle, and technology supply chains are exposed. Volatility is no longer episodic; it has become structural, embedding itself into every corridor of trade, finance, and households.' },
       { p: 'Our Outlook Report 2026 provides a comprehensive compass for institutions, family enterprises, investors, and individuals. It begins with the triggers unsettling the present: Washington’s unilateral acts from Venezuela’s oil flows to Greenland’s rare earths, NATO’s fiscal exhaustion, and Beijing’s hardened posture toward Taiwan.' },
@@ -284,6 +287,7 @@ export const thoughts: ThoughtSeed[] = [
       'Metals and heavy industry remain the structural foundation of global manufacturing. Our January 2026 Outlook introduces the Cash Conversion Cycle as the anchor index for resilience.',
     publishedDate: '2026-01-20',
     pdfFile: 'heavy-industry-margins-under-siege.pdf',
+    coverFile: 'covers/heavy-industry-margins-under-siege.png',
     body: [
       { p: 'Metals and heavy industry remain the structural foundation of global manufacturing, shaping infrastructure, defense, energy, and advanced technology. Unlike other subsectors, exposures here are systemic: raw materials are largely imported and dollar-denominated, energy costs remain fossil-dependent, and tariff regimes shift demand corridors across continents. Volatility in this sector is not peripheral — it is the transmission belt into the wider economy.' },
       { p: 'Our January 2026 Outlook, Heavy Industry Margins Under Siege – Cash Conversion Cycle to Defend, introduces the Cash Conversion Cycle (CCC) as the anchor index for resilience. Traditional measures such as the Producer Price Index capture input inflation, but they do not reveal how firms translate operational strain into financial outcomes. The CCC does. It measures the time taken to convert inventory and receivables into cash, offset by the credit extended through payables.' },
@@ -306,6 +310,7 @@ export const thoughts: ThoughtSeed[] = [
       'In today’s private capital corridors, charisma is no longer capital — it is a terminal discount. The Sovereign Engine is our architectural framework to transform founder-led fragility into institutional-grade equity.',
     publishedDate: '2026-02-10',
     pdfFile: 'the-sovereign-engine.pdf',
+    coverFile: 'covers/the-sovereign-engine.png',
     body: [
       { p: 'In today’s private capital corridors, charisma is no longer capital — it is a terminal discount. Founder-dependent businesses are flagged as liabilities, trading at 30–50% lower multiples than systematized peers. The Sovereign Engine is our architectural framework to close this gap, transforming founder-led fragility into institutional-grade equity.' },
       { p: 'The diagnostic is clear: Key Man risk erodes value, institutional fatigue stalls growth, and the Founder’s Aura imposes a permanent haircut on valuation multiples. Sophisticated capital does not buy people; it buys engines.' },
@@ -324,6 +329,7 @@ export const thoughts: ThoughtSeed[] = [
       'The S1 Era is defined by the Solvency Trap: rates elevated, liquidity contracting. For mid-market firms, refinancing is no longer a lever — it is a hazard. Stress tables, allocator matrices, and board-level roadmaps for executives.',
     publishedDate: '2026-03-10',
     pdfFile: 'the-sovereign-guide-to-capital.pdf',
+    coverFile: 'covers/the-sovereign-guide-to-capital.png',
     body: [
       { p: 'The S1 Era is defined by the Solvency Trap: rates elevated, liquidity contracting. For mid-market firms, refinancing is no longer a lever — it is a hazard.' },
       { p: 'The Sovereign Guide to Capital provides executives with stress tables, allocator matrices, solvency metrics, and board-level roadmaps. It maps capital migration away from banks toward Family Offices ($195B deployed Feb 2026), Sovereign Funds ($15T AUM, +60% MENA growth since 2020), and Private Syndicates.' },
@@ -345,6 +351,89 @@ export const documents = [
     title: 'The Will to Win — 10-Year Anniversary Report',
     category: 'report' as const,
     file: 'the-will-to-win-10-year-anniversary-report.pdf',
+  },
+]
+
+export type StorySeed = {
+  slug: string
+  order: number
+  title: string
+  client: string
+  industry: string
+  theme: string
+  excerpt: string
+  milestones: string[]
+  body: Block[]
+  quote: string
+  closing?: string
+}
+
+// Success Stories recovered verbatim from the live WordPress database
+// (page "Success Stories", post ID 26).
+export const stories: StorySeed[] = [
+  {
+    slug: 'turning-friction-into-clarity',
+    order: 1,
+    title: 'Turning Friction into Clarity',
+    client: 'Multi-generational Manufacturing Business',
+    industry: '3rd Gen Family Business — Manufacturing',
+    theme: 'Conflict resolution, strategic alignment, and legacy transformation',
+    excerpt: 'Family manufacturer — alignment and legacy transformation.',
+    milestones: [
+      '“Change the Game” Program',
+      'Surfaced Market Threats',
+      'Decoded Emotional & Strategic Friction',
+      'Board-Aligned Scenarios & Forecasts',
+    ],
+    body: [
+      { p: 'In the heart of a legacy manufacturing firm, generational tensions had calcified into operational paralysis. The founding generation clung to practices that once built the business, while the rising leadership struggled to introduce innovation. Decisions stalled. Meetings became battlegrounds. The business, once a symbol of resilience, was drifting.' },
+      { p: 'acuv stepped in—not as referees, but as architects of clarity. Through the “Change the Game” program, we didn’t just mediate; we decoded the emotional and strategic friction. We extracted market threats that had gone unspoken and surfaced internal tensions that had long been buried under politeness and protocol.' },
+      { p: 'Then came the pivot: we built future scenarios that didn’t just forecast growth—they invited belief. With board-aligned forecasts and a shared vision, the leadership found common ground. In just nine months, the business repositioned itself with a renewed mandate for growth.' },
+    ],
+    quote: 'acuv helped us see the future clearly—and get there together.',
+    closing: 'This wasn’t just a turnaround. It was a reconciliation between legacy and possibility.',
+  },
+  {
+    slug: 'raising-capital-with-confidence',
+    order: 2,
+    title: 'Raising Capital with Confidence',
+    client: 'FMCG Distributor',
+    industry: 'FMCG Distributor — Retail',
+    theme: 'Capital readiness, investor narrative, and financial modeling',
+    excerpt: 'FMCG Distributor — investor readiness, valuation integrity.',
+    milestones: [
+      'Investor-Ready Narrative',
+      'Robust Financial Model',
+      'Risk & Sensitivity Scenarios',
+      'Term Sheet & Raise Strategy',
+    ],
+    body: [
+      { p: 'We reframed the value story around defensible distribution moats and operational efficiency gains, then translated it into a crisp investor deck and a bottom-up model.' },
+      { p: 'Scenario analysis clarified capital needs and timing. The team entered investor meetings aligned, confident, and consistent.' },
+    ],
+    quote: 'What changed most was clarity—our numbers, our ask, our conviction.',
+    closing: 'Outcome: compelling narrative, calibrated targets, and a cleaner path to capital.',
+  },
+  {
+    slug: 'unlocking-structure-for-growth',
+    order: 3,
+    title: 'Unlocking Structure for Growth',
+    client: 'Emerging Tech Services',
+    industry: 'Emerging Tech Services — Startup',
+    theme: 'Org design, operating cadence, and KPI instrumentation',
+    excerpt: 'Emerging Tech Services — org design, cadence, KPIs.',
+    milestones: [
+      'Org Design & Roles Clarity',
+      'Operating Cadence',
+      'KPI & Dashboard Instrumentation',
+      'Roadmap & Execution',
+    ],
+    body: [
+      { p: 'We established role clarity and a rhythm of accountability. A simple live dashboard tied work to outcomes and surfaced decisions weekly.' },
+      { p: 'Momentum replaced ambiguity; growth became repeatable.' },
+    ],
+    quote: 'Structure didn’t slow us—it unlocked us.',
+    closing: 'Outcome: fewer handoffs, faster delivery, stronger margins.',
   },
 ]
 
