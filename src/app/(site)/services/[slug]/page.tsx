@@ -81,7 +81,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 <SectionRail num="IV" label="WHY ACUV" screenLabel="Why acuv" last>
   <div className="acv-duo" style={{ display: 'grid', gridTemplateColumns: '1fr 260px', gap: '56px', alignItems: 'center' }}>
     <div style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', fontSize: '26px', lineHeight: '1.5', color: '#0A4A3F' }}>{service.why}</div>
-    <a className="acv-pill" href="/engagement-model" style={{ justifySelf: 'end', fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.12em', color: '#F6F5F1', background: '#0A4A3F', padding: '15px 28px', borderRadius: '16px' }}>HOW WE ENGAGE →</a>
+    <a className="acv-pill" href="/engagement-model" style={{ justifySelf: 'end', fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.1em', padding: '9px 20px', borderRadius: '16px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1, whiteSpace: 'nowrap', border: '1px solid transparent', color: '#F6F5F1', background: '#0A4A3F' }}>HOW WE ENGAGE →</a>
   </div>
 </SectionRail>
 

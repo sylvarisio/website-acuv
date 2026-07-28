@@ -107,7 +107,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     ) : null}
 
     {pdfUrl ? (
-      <a className="acv-pill" href={pdfUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', marginBottom: '44px', fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.12em', color: '#F6F5F1', background: '#0A4A3F', padding: '13px 24px', borderRadius: '16px' }}>DOWNLOAD PDF ↓</a>
+      <a className="acv-pill" href={pdfUrl} target="_blank" rel="noopener noreferrer" style={{ marginBottom: '44px', fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.1em', padding: '9px 20px', borderRadius: '16px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1, whiteSpace: 'nowrap', border: '1px solid transparent', color: '#F6F5F1', background: '#0A4A3F' }}>DOWNLOAD PDF ↓</a>
     ) : null}
 
     {thought.body ? (

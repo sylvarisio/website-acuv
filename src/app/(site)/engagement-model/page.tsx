@@ -57,7 +57,7 @@ export default function Page() {
       <div style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', fontSize: '28px', lineHeight: '1.45', color: '#0A4A3F' }}>“Clear direction, measurable outcomes, and a partner that truly executes.”</div>
       <div style={{ marginTop: '14px', fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.22em', color: 'rgba(18,42,36,.55)' }}>WORDS WE ARE PROUD OF</div>
     </div>
-    <a className="acv-pill" href="/success-stories" style={{ justifySelf: 'end', fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.12em', color: '#F6F5F1', background: '#0A4A3F', padding: '15px 28px', borderRadius: '16px' }}>SEE THE STORIES →</a>
+    <a className="acv-pill" href="/success-stories" style={{ justifySelf: 'end', fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.1em', padding: '9px 20px', borderRadius: '16px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1, whiteSpace: 'nowrap', border: '1px solid transparent', color: '#F6F5F1', background: '#0A4A3F' }}>SEE THE STORIES →</a>
   </div>
 </SectionRail>
 

@@ -56,7 +56,7 @@ export default function AnnouncementBand({ announcement }: { announcement?: any 
             href={pdfUrl || '#'}
             target={pdfUrl ? '_blank' : undefined}
             rel={pdfUrl ? 'noopener noreferrer' : undefined}
-            style={{ marginTop: 64, fontFamily: 'var(--font-sans)', fontSize: 12, letterSpacing: '.12em', color: '#0A4A3F', background: '#9FD9C6', padding: '13px 24px', borderRadius: 16, display: 'inline-block', opacity: pdfUrl ? 1 : 0.5, pointerEvents: pdfUrl ? 'auto' : 'none' }}
+            style={{ marginTop: 64, fontFamily: 'var(--font-sans)', fontSize: 12, letterSpacing: '.1em', padding: '9px 20px', borderRadius: 16, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1, whiteSpace: 'nowrap', border: '1px solid transparent', color: '#0A4A3F', background: '#9FD9C6', display: 'inline-block', opacity: pdfUrl ? 1 : 0.5, pointerEvents: pdfUrl ? 'auto' : 'none' }}
           >
             {buttonLabel}
           </a>

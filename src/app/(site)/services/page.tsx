@@ -82,7 +82,7 @@ export default function Page() {
       <div style={{ fontSize: '36px', fontWeight: '300', letterSpacing: '-.015em' }}>How we engage: <span style={{ fontFamily: 'var(--font-sans)', fontStyle: 'italic', color: '#0A4A3F' }}>insight to impact</span>, with ownership at every step.</div>
       <p style={{ margin: '16px 0 0', fontSize: '16px', lineHeight: '1.8', color: 'rgba(18,42,36,.72)', maxWidth: '560px' }}>Every program follows the same disciplined arc — see the model that carried 87 engagements across 18 countries.</p>
     </div>
-    <a className="acv-pill" href="/engagement-model" style={{ justifySelf: 'end', fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.12em', color: '#F6F5F1', background: '#0A4A3F', padding: '15px 28px', borderRadius: '16px' }}>ENGAGEMENT MODEL →</a>
+    <a className="acv-pill" href="/engagement-model" style={{ justifySelf: 'end', fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.1em', padding: '9px 20px', borderRadius: '16px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1, whiteSpace: 'nowrap', border: '1px solid transparent', color: '#F6F5F1', background: '#0A4A3F' }}>ENGAGEMENT MODEL →</a>
   </div>
 </SectionRail>
 

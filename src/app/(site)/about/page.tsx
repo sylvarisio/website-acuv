@@ -158,7 +158,7 @@ export default async function Page() {
           <div style={{ fontFamily: 'var(--font-sans)', fontSize: '11px', letterSpacing: '.22em', color: '#9FD9C6' }}>YEARS</div>
         </div>
       </div>
-      <a className="acv-pill" href={reportUrl || '#'} target={reportUrl ? '_blank' : undefined} rel={reportUrl ? 'noopener noreferrer' : undefined} style={{ marginTop: '52px', fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.12em', color: '#0A4A3F', background: '#9FD9C6', padding: '13px 24px', borderRadius: '16px', display: 'inline-block', opacity: reportUrl ? 1 : 0.5, pointerEvents: reportUrl ? 'auto' : 'none' }}>DOWNLOAD THE REPORT ↗</a>
+      <a className="acv-pill" href={reportUrl || '#'} target={reportUrl ? '_blank' : undefined} rel={reportUrl ? 'noopener noreferrer' : undefined} style={{ marginTop: '52px', fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.1em', padding: '9px 20px', borderRadius: '16px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1, whiteSpace: 'nowrap', border: '1px solid transparent', color: '#0A4A3F', background: '#9FD9C6', opacity: reportUrl ? 1 : 0.5, pointerEvents: reportUrl ? 'auto' : 'none' }}>DOWNLOAD THE REPORT ↗</a>
     </div>
   </div>
 </SectionRail>

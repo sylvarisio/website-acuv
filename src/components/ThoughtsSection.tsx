@@ -38,7 +38,7 @@ export default function ThoughtsSection({ thoughts }: { thoughts: any[] }) {
                   {coverUrl(featured) ? (
                     <img src={coverUrl(featured)} alt="" style={{ width: 240, height: 200, objectFit: 'cover', display: 'block' }} />
                   ) : null}
-                  <div style={{ fontFamily: 'var(--font-sans)', fontSize: 12, letterSpacing: '.12em', color: '#0A4A3F', background: '#9FD9C6', padding: '13px 24px', borderRadius: 16 }}>
+                  <div style={{ fontFamily: 'var(--font-sans)', fontSize: 12, letterSpacing: '.1em', padding: '9px 20px', borderRadius: 16, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1, whiteSpace: 'nowrap', border: '1px solid transparent', color: '#0A4A3F', background: '#9FD9C6' }}>
                     READ →
                   </div>
                 </div>

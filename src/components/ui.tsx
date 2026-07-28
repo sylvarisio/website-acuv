@@ -62,23 +62,21 @@ export function ArrowText({ label, mint, external, style }: { label: string; min
 
 // ---------------------------------------------------------------- Pill
 export function Pill({ href, label, variant = 'primary', external, style }: { href: string; label: string; variant?: 'primary' | 'outline' | 'compact'; external?: boolean; style?: React.CSSProperties }) {
-  const base: React.CSSProperties = {
-    fontFamily: 'var(--font-sans)',
-    display: 'inline-block',
-    borderRadius: '16px',
-    ...(variant === 'compact'
-      ? { fontSize: '12px', letterSpacing: '.12em', padding: '13px 24px', color: '#F6F5F1', background: '#0A4A3F' }
+  // One shape for every button on the site, matching the nav CONTACT pill:
+  // 12px/.1em text, 9px 20px padding, 16px radius, flex-centered baseline.
+  const colors: React.CSSProperties =
+    variant === 'compact'
+      ? { color: '#F6F5F1', background: '#0A4A3F', border: '1px solid transparent' }
       : variant === 'outline'
-        ? { fontSize: '13px', letterSpacing: '.14em', padding: '15px 28px', color: '#9FD9C6', border: '1px solid rgba(159,217,198,.5)' }
-        : { fontSize: '13px', letterSpacing: '.14em', padding: '15px 28px', color: '#07332C', background: '#9FD9C6' }),
-  }
+        ? { color: '#9FD9C6', border: '1px solid rgba(159,217,198,.5)' }
+        : { color: '#07332C', background: '#9FD9C6', border: '1px solid transparent' }
   return (
     <a
       className="acv-pill"
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
-      style={{ ...base, ...style }}
+      style={{ fontFamily: 'var(--font-sans)', fontSize: '12px', letterSpacing: '.1em', padding: '9px 20px', borderRadius: '16px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1, whiteSpace: 'nowrap', ...colors, ...style }}
     >
       {label}
     </a>
