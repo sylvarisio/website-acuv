@@ -36,9 +36,10 @@ First visit to `/admin` prompts you to create the first admin user.
 3. Environment variables:
    - `PAYLOAD_SECRET` — long random string (40+ chars)
    - `DATABASE_URI` — `file:./data/payload.db` (or an absolute path on persistent storage)
-   - `NEXT_PUBLIC_SERVER_URL` — `https://new.acuvstrategy.com`
-   - `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `CONTACT_TO` — outgoing email for
-     the contact form (e.g. `smtp.office365.com` / `587`). **Without these the form still
+   - `NEXT_PUBLIC_SERVER_URL` — `https://acuvstrategy.com`
+   - `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `SMTP_FROM`, `CONTACT_TO` — outgoing
+     email for the contact form via Lettermint (`smtp.lettermint.co` / `587`, user `lettermint`,
+     password = project API token, `SMTP_FROM` = sender on the verified domain). **Without these the form still
      stores submissions in the CMS but sends no email** — the server log will say
      "SMTP is NOT configured".
 4. **Persistence check (important):** `data/` (SQLite) and `media/` (uploads) must survive

@@ -59,17 +59,19 @@ export async function POST(req: Request) {
     console.error('Failed to store submission:', e)
   }
 
-  // Send email via SMTP (Office 365 by default)
+  // Send email via SMTP (Lettermint: user is the literal string "lettermint",
+  // password is a project API token, SMTP_FROM must be on the verified domain)
   const host = process.env.SMTP_HOST
   const port = Number(process.env.SMTP_PORT || 587)
   const user = process.env.SMTP_USER
   const pass = process.env.SMTP_PASS
-  const to = process.env.CONTACT_TO || user
+  const from = process.env.SMTP_FROM || user
+  const to = process.env.CONTACT_TO
 
   if (!host || !user || !pass || !to) {
     console.error(
       'CONTACT FORM: SMTP is NOT configured — enquiry was stored in the CMS but NO email was sent. ' +
-        'Set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS and CONTACT_TO (see .env.example / README).',
+        'Set SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, SMTP_FROM and CONTACT_TO (see .env.example / README).',
     )
     // Submission was stored (if that worked); tell the client it succeeded.
     return NextResponse.json({ ok: true, emailed: false })
@@ -95,7 +97,7 @@ export async function POST(req: Request) {
     `
 
     await transporter.sendMail({
-      from: `"acuv Strategy Website" <${user}>`,
+      from: `"acuv Strategy Website" <${from}>`,
       to,
       replyTo: `"${name}" <${email}>`,
       subject,
